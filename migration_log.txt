@@ -22,3 +22,7 @@ $ cp ~/Downloads/articles.html httpdocs/articles.html
 $ git add httpdocs/articles.html
 $ git commit -m "updated articles list"
 $ git push
+
+On laptop:
+$ scp  ~/Downloads/articles.html maloni1@maloni.humanities.uva.nl:~/httpdocs/articles.html
+

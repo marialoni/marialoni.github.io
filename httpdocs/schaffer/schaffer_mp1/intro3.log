@@ -1,0 +1,38 @@
+This is pdfeTeX, Version 3.141592-1.20a-2.2 (Web2C 7.5.3) (format=pdflatex 2005.4.5)  7 SEP 2007 09:35
+entering extended mode
+**intro3.tex
+(./intro3.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, d
+utch, italian, norsk, portuges, spanish, swedish, nohyphenation, loaded.
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 I
+     n a recent paper, Jonathan Schaffer presents an argument against
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.3 I
+     n a recent paper, Jonathan Schaffer presents an argument against
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 6 strings out of 95217
+ 247 string characters out of 1184539
+ 2045165 words of memory out of 4500000
+ 3211 multiletter control sequences out of 10000+50000
+ 3640 words of font info for 14 fonts, out of 2000000 for 2000
+ 58 hyphenation exceptions out of 1000
+ 5i,0n,4p,78b,14s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 0 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 1 words of extra memory for PDF output out of 65536
+No pages of output.

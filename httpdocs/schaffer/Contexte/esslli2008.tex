@@ -1,0 +1,632 @@
+\documentclass[font=palatino]{beamer}
+
+
+
+%\usecolortheme[rgb={0.6,0.2,0.2}]{structure}
+\usepackage{beamerthemeMalmoe}
+
+\mode<presentation> \AtBeginSubsection
+
+
+\title{Knowing whether A or B}
+
+
+\date{11/08/2008}
+\author[]{M. Aloni \& P. \'Egré}
+\institute{}
+
+\AtBeginSubsection[] {
+  \begin{frame}<beamer>
+    \frametitle{Plan}
+
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+\newcommand{\lang}[1]{\ensuremath{\mathcal{L #1}}}
+
+\usepackage{latexsym}
+\usepackage[cyr]{aeguill}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{bm}
+\usepackage{linguex}
+\newtheorem{theo1}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{def1}{Definition}
+\newtheorem{thez}{Thesis}
+\newtheorem{question}{Question}
+\newtheorem{loi}{Law}
+\newtheorem{hypot}{Hypothesis}
+\newtheorem{lemme}{Lemma}
+
+\newcommand{\bl}{$\bullet$\ }
+\newcommand{\val}[1]{\mbox{ $[\![$  #1 $]\!]$}}
+\newcommand{\bit}{\begin{itemize}} \newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}} \newcommand{\een}{\end{enumerate}}
+\newcommand\notext[1]{}
+
+
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\LA}{\langle}
+\newcommand{\RA}{\rangle}
+\newcommand{\linf}{$L_{\infty, \infty}$}
+\newcommand{\linfm}{$L^{-}_{\infty, \infty}$}
+\newcommand{\lio}{$L_{\infty, \omega}$}
+\newcommand{\lom}{$L_{\omega, \omega}$}
+\newcommand{\struc}[1]{\ensuremath{\la #1 \ra}}
+\newcommand{\iso}[1]{\ensuremath{\approx _{ #1 }}}
+\newcommand{\isoa}{\ensuremath{\approx _{\alpha}}}
+\newcommand{\isop}{\ensuremath{\approx _{p}}}
+\newcommand{\nisop}{\ensuremath{\not \approx _{p}}}
+\newcommand{\sta}{\ensuremath{\mathcal{A}}}
+\newcommand{\stb}{\ensuremath{\mathcal{B}}}
+\newcommand{\stc}{\ensuremath{\mathcal{C}}}
+\newcommand{\stm}{\ensuremath{\mathcal{M}}}
+\newcommand{\stmp}{\ensuremath{\mathcal{M}'}}
+\newcommand{\eqliw}{\ensuremath{\equiv _{\infty , \omega} }}
+\newcommand{\eqliwa}{\ensuremath{\equiv _{\infty , \omega}^{\alpha} }}
+
+%\newcommand\notext[1]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+
+\begin{frame}
+
+\maketitle
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Schaffer's problem of convergent knowledge}
+\framesubtitle{(J. Schaffer 2007)}
+\ex. \a. Bill knows whether George Bush or Will Ferrell is on TV.
+\b. Bill knows whether George Bush or Janet Jackson is on TV.
+
+
+\end{frame}
+
+ \notext{\section{Convergent Knowledge}
+
+\begin{frame}
+
+\frametitle{Schaffer's problem of convergent knowledge}
+
+\framesubtitle{(J. Schaffer 2007)}
+
+\ex. \a. Is George Bush or Will Ferrell on TV? \b. Is George Bush
+or Janet Jackson on TV?\pause
+
+\begin{itemize}
+
+\item \alert{Assumption 1}: to know Q is to know the true answer
+to Q
+
+\item \alert{Assumption 2}: ``George Bush is on TV" is the true
+answer to both questions.
+
+
+
+\end{itemize}\pause
+
+\ex. \a. Bill knows whether George Bush or Will Ferrell is on TV.
+\b. Bill knows whether George Bush or Janet Jackson is on TV
+
+
+
+%%
+
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Convergent knowledge (1)}
+
+\ex.[(CV)] \qquad \begin{tabular}{c}
+\val{Q}($w$)\ =\val{Q'}($w$)\\
+\hline \val{S knows Q}($w$)\ =\val{S knows Q'}($w$)\\
+\end{tabular}\pause
+
+\begin{itemize}
+
+\item (CV) holds both in Karttunen's theory of questions, and in
+Groenendijk and Stokhof's theory of questions.\medskip \pause
+
+\item When Q and Q' have the same complete answers, knowing Q and
+knowing Q' are truth-conditionally equivalent (by
+compositionality).
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Convergent Knowledge (2)}
+
+According to Schaffer, ``if a question has a true answer, it must
+converge with any question that merely shifts the false answers":
+
+\ex.[(A)] \a. S knows $?(\phi \vee \psi_1)$
+ \b.  $\phi$
+ \c. S knows whether $?(\phi \vee \psi_2)$
+
+\ex. \a. Bill knows whether Bush or Janet Jackson is on TV. \b.
+Bush is on TV. \c. Bill knows whether Bush or Ferrell is on TV.
+
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Schaffer's proposal}
+
+\begin{itemize}
+
+\item the standard analysis of knowing-wh in terms of knowing-that
+is flawed.
+
+\item know is question-relative: to know that Bush is on TV means
+to know that Bush rather than someone else is on TV
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Our proposal}
+
+\begin{itemize}
+
+\item While (CV) is supported by the standard theories of
+questions, (A) need not be.\pause
+
+\item On at least one reasonable analysis of alternative
+questions, (CV) fails to deliver Schaffer's predictions\pause
+
+\item Alternative questions can be used to contextually restrict the space of
+possibilities relevant for knowledge attributions
+
+
+\end{itemize}
+
+\end{frame}
+
+}
+%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Outline}
+
+\begin{enumerate}
+
+\item Polar and alternative questions
+
+\item Ascriptions and Context
+
+%\item Adding Presupposition
+
+\item Conclusion
+\end{enumerate}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Alternative Questions}
+
+\begin{frame}
+
+\frametitle{Polar vs Alternative Questions}
+
+\ex. Is Mary French or Italian?\pause
+
+\ex. \a. Is Mary either French or Italian? \b. Yes/No. \c.
+*French/*Italian.\pause
+
+\ex. \a. Is Mary [French]$_F$ or [Italian]$_F$? \b. *Yes/*No \c.
+French / Italian.
+
+(Cornulier 1982, Haspelmath 2000, Han \& Romero 2003).
+
+\begin{itemize}\pause
+
+\item Schaffer's target: alternative readings
+
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Strongly and weakly exhaustive answers}
+
+\ex. Who called?
+
+Context: only Mary and John called.
+
+\begin{itemize}
+
+\item \alert{Karttunen} (weakly exhaustive answer): Mary and John called.
+
+\item \alert{Groenendijk and Stokhof} (strongly exhaustive answer): Mary and
+John called, and nobody else called.
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Different predictions}
+
+\ex. \a. John knows who called \b. Mary called. \c. John knows
+Mary called. [K, GS]\pause
+
+\ex. \a. John knows who called. \b. Sue did not call. \c. John
+knows Sue did not call. [GS]
+
+\begin{itemize}\pause
+
+\item In favour of GS: suppose only Mary called. John
+knows Mary called, but also believes that Sue called. Whould we
+say that John knows who called? (Spector 2006).
+
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Partition Semantics}
+
+\ex. Is BUSH or JANET JACKSON on TV?
+
+\begin{itemize}
+
+\item Answers (GS): $\{BJ, B\neg J, \neg B J, \neg B \neg J\}$
+
+\item Assumption (AE): the presupposition, if any, that exactly one of the
+disjuncts should be true is not part of the answerhood conditions.
+
+\end{itemize}
+
+
+\begin{figure}[h]
+
+\setlength{\unitlength}{1.7cm}
+
+\begin{picture}(3,2)
+
+\put(2,2){\line(1,0){2}}
+
+\put(2,1){\line(1,0){2}}
+
+\put(2,0){\line(1,0){2}}
+
+%%%%%%%
+
+\put(2,0){\line(0,1){2}}
+
+\put(3,0){\line(0,1){2}}
+
+\put(4,0){\line(0,1){2}}
+
+%%%%%%
+
+%\put(2,0){\line(1,1){2}}
+
+%\put(2,1){\line(1,1){1}}
+
+%\put(3,0){\line(1,1){1}}
+
+%%%%%%%
+
+\put(1.7,1.5){$J$}
+
+\put(1.5,0.5){$\neg J$}
+
+\put(2.5,2.2){$B$}
+
+\put(3.3,2.2){$\neg B$}
+
+%\put(2.7,1.2){$F$}
+
+%\put(3.7,1.2){$F$}
+
+%\put(2.7,0.2){$F$}
+
+%\put(3.7,0.2){$F$}
+
+\end{picture}
+
+\end{figure}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Convergent or not}
+
+Context: Bush and noone else is on TV.
+
+\ex. \a. Is Bush or Janet Jackson on TV? \b. True answer (K): Bush
+is on TV. \c. True exhaustive answer (GS): Bush is on TV and Janet
+Jackson is not on TV.\pause
+
+\ex. \a. Is Bush or Will Ferrell on TV? \b. True answer (K): Bush
+is on TV. \c. True exhaustive answer (GS): Bush is on TV and
+Ferrell is not on TV.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Comparison}
+
+\begin{itemize}
+
+\item on K.'s analysis: the two questions are convergent, and (A)
+holds.
+
+\item on GS's analysis: the two questions are not convergent, (A)
+does not hold.
+
+\end{itemize}
+
+\ex. John knows that Bush is on TV and that Jackson is not
+
+\ex. John knows that Bush is on TV and that Ferrell is not.
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Summary}
+
+\begin{itemize}
+
+\item Karttunen's semantics is consistent with Schaffer's
+predictions, but too weak to be adequate for knowledge
+attributions\pause
+
+\item GS's semantics does not support Schaffer's predictions\pause
+
+\item In both cases, we ignored further restrictions on the space
+of answers: for instance, it may be presupposed that exactly one
+person is on TV.
+
+\end{itemize}
+
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Context and Attributions}
+
+\begin{frame}
+
+\frametitle{A closer look at Schaffer's examples}
+
+\begin{itemize}
+
+\item Schaffer's intuition: knowing whether Bush or Janet Jackson is
+on TV is easier than knowing whether Bush or Ferrell is on
+TV.\pause
+
+\item Contextualist idea: knowing whether A or B can be easier than
+knowing whether A or C, if the alternatives provide suitable
+\alert{restrictions} of the agent's epistemic state.\pause
+
+\end{itemize}
+
+\ex. ``S knows that P" is true in $w$ iff $K_w \subseteq P$\pause
+
+\ex. \label{wh} ``S knows whether A or B" is true in $w$ iff
+$K_{w}\cap(A \cup B) \subseteq A$ or $K_{w}\cap(A \cup B)
+\subseteq B$
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\input{figure1} \pause
+
+\ex. \a. $K_{w} \cap (B \cup F) \nsubseteq B$, $\nsubseteq F$. \b.
+Bill does not know whether Bush or Ferrell is on TV.\pause
+
+\ex. \a. $K_{w} \cap (B \cup J) \subseteq B$ \b. Bill knows
+whether Bush or Jackson is on TV.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+
+\frametitle{Partial answers}
+
+\begin{itemize}
+
+\item Suppose Bill is asked whether Bush or Jackson is on TV. Bill
+is certain it is not Jackson, but thinks it might be Ferrell. What
+would Bill answer to:
+
+\ex. Is it Bush or Janet Jackson?
+
+\ex. \a. (?) It's Bush. \b. At any rate, it's not Janet
+Jackson.\pause
+
+\item Another example (from Schaffer)
+
+\ex. Was the thirteenth president of the US Millard Fillmore or
+Hillary Clinton?
+
+\ex. \a. (?) Millard Fillmore. \b. At any rate, not Hillary
+Clinton.
+
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Dynamics of questions}
+
+\ex. Is it a zebra or a horse?
+
+\ex. A zebra.
+
+\ex. Is it a zebra or a cleverly painted mule?
+
+\ex. I don't know.
+
+\ex. So is it a zebra, or a horse?
+
+\ex. Well, not a horse, but...
+
+\alert{Consequence}: one cannot take the alternatives present in
+the question to systematically restrict the agent's epistemic
+state.
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Alternative questions revisited}
+
+\begin{tabular}{ll}
+
+\small{Representation} & Q=$?(\phi \vee_{a} \psi)$= $?p ( p \wedge(p=\phi \vee p=\psi))$\\
+
+\small{Denotation} & \val{Q}=$\{ (p, w) \mid w\in p \ \& \ p=
+\val{
+$\phi$} \ or \ p= \val{$\psi$} \}$\\
+
+\small{Partition} & Part(Q)=$\{(w,v)\mid (p,w) \in \val{$Q$}\ iff\
+(p,v)\in \val{$Q$}\}$\\
+
+\small{Topics} & Top(Q)=$\{ p\mid \exists w: (p,w)\in
+\val{$Q$}\}$\\
+
+\end{tabular}
+
+\ex. Did John leave, or did Mary leave? \a. Representation $?p ( p
+\wedge (p=\phi \vee p=\psi))$ \b. Partition: $\{\phi \wedge \neg
+\psi, \neg \phi \wedge   \psi, \neg (\phi\vee \psi), \phi \wedge
+\psi\}$ \b. Topics: $\{\phi,\psi\}$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Contexts and Updates}
+
+\bit
+
+\item Context $C=(s_{C},i_{C})$: $s_{C}$=set of worlds(=context set); $i_{C}$=
+sequence of question denotations (=issues under discussion).
+
+\ex. \a. $C+P = (s_{C} \cap \val{$P$}, i_{C})$ \b. $C+Q= (s_C,
+i_{C} + \val{$Q$})$
+
+\item Assertions update the context set; questions update the
+issues under discussion.
+
+\eit
+
+\end{frame}
+
+%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Knowledge contextualized}
+
+Top($C$)= union of all Top(Q) for all Q in $C$.
+
+\ex. ``S knows Q'' is true in world $w$ with respect to context
+$C$ iff $K_w \ \cap\ $Top$(C) \ \subseteq \ $ANS$_w(Q)$
+[simplified truth conditions]
+
+\end{frame}
+
+%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Back to Schaffer's example}
+
+\input{fig2}
+
+\ex.\label{bj} \a. S knows whether it is Bush or Janet Jackson on
+TV. \b. true in $C + ?(B \vee_a J)$, but false in $C +  ?(B \vee_a
+J) + ?(B \vee_a F)$
+
+\ex.\label{bf} \a. S knows whether it is Bush or Ferrell on TV.
+\b. false in $C + ?(B \vee_a F)$, and likewise false in $C + ?(B
+\vee_a F) + ?(B\vee_a J)$.
+
+
+\end{frame}
+
+
+\input{presupposition}
+
+\input{conclusion}
+
+
+\end{document}
+ 

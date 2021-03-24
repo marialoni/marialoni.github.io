@@ -1,0 +1,341 @@
+
+%
+%  Guidlines for
+%
+%  $Author: ienne $
+%  $Date: 1995/09/15 15:20:59 $
+%  $Revision: 1.4 $
+%
+
+\documentclass[times,10pt,twocolumn]{article}
+\usepackage{latex8}
+\usepackage{times}
+
+
+
+%-------------------------------------------------------------------------
+% theorem,definition, etc. environments.
+%
+%
+%The following packages are used.    Email epacuit@stanford.edu
+%if there is a problem.
+\usepackage{amsmath,amsfonts,latexsym,amssymb,url,theorem,color}
+
+%%theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+%%proof environment
+\newenvironment{proof}{\begin{trivlist}\item[]{\bf
+Proof.}}{\hfill {\sc qed}\end{trivlist}}
+\newenvironment{proofof}[1]{\begin{trivlist}\item[\hskip\labelsep{\bf
+Proof~of~{#1}.\ }]}{\hspace*{\fill} {{\sc qed }(of Claim)}
+\end{trivlist}}
+
+%%for definitions
+{\theorembodyfont{\rmfamily}
+\newtheorem{defi}[theorem]{Definition}}
+
+\newenvironment{definition}{\begin{defi}\rm}{\hfill
+$\triangleleft$\end{defi}}
+
+\newenvironment{Definition}[1]{\begin{defi}[{#1}]\rm}{\hfill
+$\triangleleft$\end{defi}}
+
+
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{convention}[theorem]{Convention}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exam}[theorem]{Example}
+\newtheorem{openprob}[theorem]{Open Problem}
+\newtheorem{observation}[theorem]{Observation} %%niet in LLNCS style
+
+\newenvironment{example}[1]{\begin{exam}[{#1}]\rm}{\end{exam}}
+\newenvironment{openproblem}[1]{\begin{openprob}[{#1}]\rm}{\end{openprob}}
+
+
+%
+%-------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------
+\usepackage{linguex}
+
+\newcommand{\bl}{$\bullet$\ }
+\newcommand{\val}[1]{\mbox{ $[\![$  #1 $]\!]$}}
+\newcommand{\bit}{\begin{itemize}} \newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}} \newcommand{\een}{\end{enumerate}}
+\newcommand\notext[1]{}
+\newcommand{\lin}{\ensuremath{\lbrack\!\lbrack}}
+\newcommand{\rin}{\ensuremath{\rbrack\!\rbrack}}
+
+%
+%-------------------------------------------------------------------------
+
+
+%-------------------------------------------------------------------------
+% do not remove --- page numbers will be added later
+\pagestyle{empty}
+
+%-------------------------------------------------------------------------
+\begin{document}
+
+\title{Knowing whether A or B}
+
+\author{Maria Aloni\\
+ILLC, Amsterdam \\M.D.Aloni@uva.nl\\
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+\and
+Paul \'Egr\'e   \\
+Institut Jean-Nicod, Paris\footnote{EHESS/ENS/CNRS.}\\
+paulegre@gmail.com\\
+}
+
+\maketitle \thispagestyle{empty}
+
+\begin{abstract}
+
+Can we say that $s$ knows whether A or B when $s$ is only able to
+rule out A, but remains uncertain about B? We discuss a set of
+examples put forward by J. Schaffer's in favour of a contextualist
+answer to this problem. We present a context-sensitive and dynamic
+semantics for knowledge attributions, in which those can depend on
+the alternatives raised by the embedded question, but also on
+alternatives raised earlier in the context.
+
+\end{abstract}
+
+
+\Section{Alternative questions in epistemic contexts}
+
+The aim of this paper is to discuss the semantics of knowledge
+attributions of the form ``$s$ knows whether A or B", which we may
+symbolize by $K_{s} ?(A\vee_{a} B)$, where $?(A \vee_{a} B)$
+denotes an alternative disjunctive question, like ``is John in
+London, or is Mary in London?". More specifically, our aim is to
+provide a dynamic account of the context-sensitivity of such
+attributions.
+
+It is standard in linguistic theory to distinguish polar readings
+and alternative readings of disjunctive questions (see e.g.
+Haspelmath 2000, Han and Romero 2003). Under the polar reading, a
+question of the form ``is John or Mary in London?" calls for a yes
+or no answer. The polar reading can be forced in English by asking
+``is either John or Mary in London?". For the alternative reading,
+by contrast, the question cannot be answered by yes or no and has
+to be answered by a sentence like ``John is London", or ``Mary is
+not in London", namely by providing information about the truth
+and falsity of the respective disjuncts.
+
+There is still some debate in the literature about the answerhood
+conditions of alternative questions, and by way of consequence,
+about the conditions under which a subject can be said to know
+whether A or B. In a recent paper (Schaffer 2007), J. Schaffer
+argues that in a context in which $s$ sees someone on TV, who is
+actually George Bush, but such that $s$ is not able to
+discriminate between George Bush and Will Ferrell (because Ferrell
+is such a good impersonator of Bush), and yet is able to see that
+it is not Janet Jackson, \ref{fer} below should be judged false,
+but \ref{jack} should count as true:
+
+\ex. \a.\label{fer} $s$ knows whether George Bush or Will Ferrell
+is on TV \b.\label{jack} $s$ knows whether George Bush or Janet
+Jackson is on TV.
+
+The intuition reason for the truth of \ref{jack}, according to
+Schaffer, is that the question ``is Bush or Janet Jackson on TV?"
+is easier for $s$ to answer than the question ``is Bush or Will
+Ferrell on TV?". In our view, however, ordinary intuitions are
+less stable: although \ref{fer} should be incontrovertibly false
+in the scenario, the status of \ref{jack} is much less clear. In
+our opinion, all that $s$ really knows is that \emph{Janet Jackson
+is not on TV}, which need not be sufficient to fully answer the
+question ``is Bush or Janet Jackson on TV?".
+
+More formally, assuming the partition theory of questions of
+Groenendijk and Stokhof (1984), an answer of the form ``Janet
+Jackson is not on TV" counts only as a \emph{partial answer} to
+the question ``is Bush or Janet Jackson on TV?". For $s$ to know
+the complete answer to the question ``is Bush or Janet Jackson on
+TV", $s$ should know more, namely that Bush is on TV and that
+Janet Jackson is not on TV. The partial answer ``Janet Jackson is
+not on TV" would count as complete if one presupposed that exactly
+one of the two disjuncts had to be true. In principle, however,
+there is no more reason to think that ``$s$ knows whether Bush or
+Janet Jackson is on TV" is true than there is to think that ``$s$
+knows whether Ferrell or Janet Jackson is on TV" is true. In other
+words, $s$'s ignorance about who exactly \emph{is} on TV seems to
+override $s$'s partial knowledge about who is \emph{not} on TV.
+
+Despite this, we agree with Schaffer that there is a sense in
+which, if $s$ is allowed to \emph{ignore} the possibility that
+Ferrell might be on TV, then $s$ can be said to know whether Bush
+or Janet Jackson is on TV, simply based on $s$'s knowledge of that
+partial answer.
+
+\Section{Dynamics of knowledge attributions}
+
+To implement this idea, we propose a question semantics for
+knowledge in which attributions involving questions can be made
+sensitive both to the alternatives raised by the question, as well
+as to alternatives raised earlier in the context. The semantics is
+dynamic, in so far as the context can be incremented with the
+considerations of new alternatives, in a way that not simply
+restricts, but can also increase, the subject's uncertainty.
+% Here we present the restriction of the system to
+%alternative questions, but the actual system deals with polar
+%questions and with more complexe constituent questions.
+
+\SubSection{Question semantics}
+
+Questions in the system are represented by formulas of the form $?
+p_1, ..., p_n \ \phi$ where ? is a query-operator, $p_1, ..., p_n$
+is a possibly empty sequence of propositional variables, and
+$\phi$ is a formula of predicate logic with propositional
+variables. In the case of alternative questions, a question of the
+form ``is $\phi$ or $\psi$?" (abbreviated $?(\phi \vee_{a} \psi)$)
+is represented by a formula of the form $?p ( p \wedge (p=\phi
+\vee p=\psi))$, which asks which of the propositions $\phi$ and
+$\psi$ is true.
+
+Questions denotations are then defined as follows, where $\vec{p}$
+stands for the sequence $p_1,...,p_n$, and  $\vec{\alpha}$ for
+ the sequence $\alpha_1,...,\alpha_n$: $\lin? \vec{p} \ \phi\rin_{M,g} = \{ \langle
+\vec{\alpha}, w\rangle \mid  \ w \in  \lin  \phi\rin_{M,g[\vec{p}
+/ \vec{\alpha}  ]}  \}$. The denotation of an alternative question
+$?p (p \wedge    (p=\phi \vee p=\psi))$ is thus the set of pairs
+$\langle  p, w \rangle$ such that $w$ satisfies $p$ and  $p$ is
+either the proposition expressed by $ \phi $ or the proposition
+expressed by $  \psi $. From the denotation of a question, we can
+define the \emph{partition} Part$(?\vec{p}  \ \phi)$ induced by
+the question $?\vec{p}  \ \phi$ as the set of ordered pairs
+$\langle w,v\rangle$ such that for all proposition $\vec{\alpha}$,
+$\langle \vec{\alpha}, w\rangle \in \lin ? \vec{p} \ \phi
+\rin_{M,g}$ iff $\langle \alpha, v\rangle \in \lin ? \vec{p} \
+\phi \rin_{M,g}$. Finally, we define the \emph{topics} raised by a
+question as the set Top$_{M,g}(?\vec{p} \ \phi)$ = $\{
+\vec{\alpha}  \mid \exists w: \langle  \vec{\alpha} , w\rangle \in
+\lin ?\vec{p}  \ \phi\rin_{M,g} \}$. For alternative questions,
+one can check that Part($?(\phi \vee_{a} \psi$))=$\{\phi \wedge
+\neg \psi, \neg \phi \wedge \psi, \neg \phi \wedge \neg \psi, \phi
+\wedge \psi\}$, and Top$(?(\phi \vee_{a} \psi))$=$\{\phi, \psi\}$.
+
+\SubSection{Knowledge and context updates}
+
+A \emph{context} $C$ is defined as an ordered pair whose first
+index $s_C$ is an information state (set of worlds), and whose
+second index $i_C$ is a sequence of question denotations
+representing  the issues  under discussion in $C$. A context $C$
+can be updated either by an assertion $P$, or by the introduction
+of a new question $Q$:
+
+\ex. \a. $C+P = (s_C \cap \lin P\rin, i_C)$ \b. $C+Q= (s_C,
+i_C+\lin Q\rin)$
+
+We let ANS$_w(Q)$ be the true exhaustive answer to $Q$ in $w$ (the
+cell containing $w$ in Part($Q$), and Top$(C)$ denote the union of
+the topics introduced by all the issues in $C$, i.e. for $C=
+(s_c,\lin Q_1 \rin, ..., \lin Q_n \rin)$: Top$(C)$ =
+$\bigcup_{i\in n} $Top$(Q_i) \setminus \{\langle \rangle\}$.
+
+Define $\mathcal{K}_{s}(w)$ to be the knowledge state of $s$ in
+$w$, namely the set of epistemically accessible worlds to $s$. We
+then define knowledge as follows:
+
+\ex. ``$s$ knows Q'' is true in world $w$ with respect to context
+$C$ iff \a.[(i)] $\mathcal{K}_{s}(w) \ \cap\ $Top$(C) \ \subseteq
+\ $ANS$_w(Q)$, \ \ if  Top$(C)\neq\emptyset$; \b.[(ii)]
+$\mathcal{K}_{s}(w) \ \subseteq \ $ANS$_w(Q)$,  \ \ otherwise.
+
+
+\Section{Schaffer's puzzle}
+
+Going back to Schaffer's example, suppose $\mathcal{K}_{s}(w)$ is
+a state compatible with Bush being on TV ($B$) and with Ferrell
+being on TV ($F$), but excluding Janet Jackson being on TV ($J$).
+The following holds:
+
+\ex.\label{bj} \a. S knows whether it is Bush or Janet Jackson on
+TV. \b. true in $C + ?(B \vee_a J)$, but false in $C +  ? (B
+\vee_a J) + ? (B \vee_a F)$
+
+\ex.\label{bf} \a. S knows whether it is Bush or Ferrell on TV.
+\b. false in $C + ?(B \vee_a F)$, and likewise false in $C + ?(B
+\vee_a F) + ?(B\vee_a J)$.
+
+The semantics predicts that when $s$'s knowledge state is
+restricted to the topics raised by ``is Janet Jackson or Bush on
+TV?", $s$ will know the answer. But if a further issue comes up
+after this question was asked, namely ``is Bush or Ferrell on
+TV?", then $s$ may no longer be said to know whether Bush or Janet
+Jackson is on TV, because the context is incremented with a third
+alternative (namely the possibility that it might be Ferrell).
+
+%%%%%%%%%%%
+
+\Section{Perspectives}
+
+
+
+The semantics here presented can be used to deal with other
+scenarios involving, in particular, the consideration of skeptical
+alternatives, whereby the introduction of a new alternative can
+impair one's initial confidence in the particular answer to a
+question. We shall explain the extension of the semantics to other
+types of questions, and discuss possible connections with the
+topic of unawareness. A further issue, which we elaborate in the
+paper, concerns the partialization of the semantics, to deal with
+presupposition failure. Thus, in a situation in which $s$ holds a
+partial answer to the question, as in Schaffer's scenario, the
+negation of \ref{jack} may be judged inappropriate, hence neither
+true nor false, rather than true at all. The partiality can be
+derived from the assumption that $s$'s uncertainty should always
+be symmetric with respect to the alternatives raised by the
+question.
+
+\begin{thebibliography}{0}
+
+\bibitem{Aloni} Aloni M. \& \'Egr\'e P. (2008), ``Alternative
+Questions and Knowledge Attributions", manuscript, under review.
+
+\bibitem{GS} Groenendijk, J. and Stokhof M. (1984), \emph{Studies
+in the Semantics of Questions and the Pragmatics of Answers}. PhD
+dissertation, University of Amsterdam.
+
+
+\bibitem{Hasp} Haspelmath, M. (2000),
+``Coordination". To appear in: T. Shopen (ed.) \emph{Language
+typology and syntactic description}. 2nd ed. Cambridge: Cambridge
+University Press.
+
+\bibitem{chan} Romero, M. and Han C-H. (2003), ``Focus, Ellipsis and
+the Semantics of Alternative Questions", in \emph{Empirical Issues
+in Formal Syntax and Semantics 4}. C. Beyssade, O. Bonami, P.
+Cabredo Hofherr, F. Corblin (eds), Presses Universitaires de
+Paris-Sorbonne, Paris, 291-307.
+
+\bibitem{Schaffer} Schaffer, J. (2007), ``Knowing the Answer",
+\emph{Philosophy and Phenomenological Research}, Vol. LXXV No. 2,
+1-21.
+
+\end{thebibliography}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

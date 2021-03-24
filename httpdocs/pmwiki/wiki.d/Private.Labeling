@@ -1,0 +1,21 @@
+version=pmwiki-2.2.0-beta65 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; nl-NL; rv:1.7.12) Gecko/20050919 Firefox/1.0.7
+author=
+charset=ISO-8859-1
+csum=
+ctime=1213884753
+host=145.18.66.27
+name=Private.Labeling
+rev=3
+targets=Private.VlachousLabeling
+text=* DN direct negation%0a* IN indirect negation%0a* CA antecedent of conditional (if then)%0a* CC consequent of conditional%0a* CO comparative construction%0a* Q question%0a* I imperative%0a* MN modal necessity%0a* MP modal possibility%0a* E episodic%0a* G generic%0a* ItC Italian conditionale (conditional)%0a* ItS Italian congiuntivo (subjunctive)%0a* F future%0a* double marking ---> add a *, es. *MP,CA%0a* uncertain --> no marking%0a* K1 conjunctive 1%0a* K2 conjunctive 2%0a%0a%0a[[Vlachou's labeling]]%0a%0a 
+time=1220349237
+author:1220349237=
+diff:1220349237:1214474380:=21,23d20%0a%3c [[Vlachou's labeling]]%0a%3c %0a%3c  %0a\ No newline at end of file%0a
+host:1220349237=145.18.66.27
+author:1214474380=
+diff:1214474380:1213884753:=3,5c3,4%0a%3c * CA antecedent of conditional (if then)%0a%3c * CC consequent of conditional%0a%3c * CO comparative construction%0a---%0a> * C conditional%0a> * CC comparative construction%0a7c6%0a%3c * I imperative%0a---%0a> * I imperatives%0a12,20d10%0a%3c * ItC Italian conditionale (conditional)%0a%3c * ItS Italian congiuntivo (subjunctive)%0a%3c * F future%0a%3c * double marking ---> add a *, es. *MP,CA%0a%3c * uncertain --> no marking%0a%3c * K1 conjunctive 1%0a%3c * K2 conjunctive 2%0a%3c %0a%3c %0a
+host:1214474380=145.18.66.164
+author:1213884753=Maria
+diff:1213884753:1213884753:=1,10d0%0a%3c * DN direct negation%0a%3c * IN indirect negation%0a%3c * C conditional%0a%3c * CC comparative construction%0a%3c * Q question%0a%3c * I imperatives%0a%3c * MN modal necessity%0a%3c * MP modal possibility%0a%3c * E episodic%0a%3c * G generic%0a
+host:1213884753=145.18.66.27

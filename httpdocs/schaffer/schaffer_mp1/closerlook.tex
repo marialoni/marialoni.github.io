@@ -1,0 +1,338 @@
+\section{A closer look at Schaffer's examples}
+
+%A feature of alternative questions is that they presuppose that
+%only one of the disjuncts is true.
+
+By asking an alternative question, one generally presupposes/{\bf implies? (I am not sure this is a presupposition, according to G\&S, page 92, it is an implicature  therefore not in the semantics)} that
+one and at most one of the two disjuncts is true.\footnote{It is
+controversial, however, whether this presupposition/{\bf pragmatic inference?} should be part
+of the denotation of alternative questions. We maintain, in the
+semantics presented in the Appendix, that the answer to an
+alternative question of the form ``whether A or B" could be
+``both" or ``neither".} \ For instance, when asking
+\ref{jackson}-a, one typically presupposes that exactly one of
+Bush or Jackson is on television. This, however, does not imply
+that there could not be more than one person on television. In a
+context in which Bush is on TV and Janet Jackson is not, the true
+exhaustive answer ``Bush is on TV and Janet Jackson is not on TV"
+to \ref{jackson}-a does not exclude that Ferrell or someone else
+too might be on TV (along with Bush). For the kind of scenario
+that Schaffer describes, however, the participants to the
+conversation presumably share the extra knowledge that
+\emph{exactly one person is on TV}. If we add this pragmatic
+presupposition into the picture, then the two questions
+\ref{jackson}-a and \ref{ferrell}-b, on their alternative reading,
+will indeed converge to the same proposition:
+
+\ex. \label{noone} Bush and noone else is on television.
+
+%
+
+Interestingly, an answer of that kind counts as a strongly
+exhaustive answer to the question ``who is on television?". Thus,
+if you know that Bush and noone else is on television, then you
+know who is on TV. In Groenendijk and Stokhof's framework, the
+question ``who is on TV?" determines a partition of the set of
+possible worlds, where each cell in the partition represents a
+strongly exhaustive answer to the question. Assuming that the
+domain of individuals consists of only George W. Bush, Will
+Ferrell, and Janet Jackson, for instance, then the question ``who
+is on TV?" would be represented as in Figure 1, where $B^{*}$
+denotes the set of worlds in which Bush and no one else is on TV,
+$J^{*}$ the set of worlds in which Jackson and no one else is on
+TV, and $F^{*}$ the set of worlds in which Ferrell and no one else
+is on TV (and likewise $(BF)^{*}$ the set of worlds where Bush and
+Ferrell and no one else is on TV, and so on).\footnote{The symbol
+$^*$ is used to mark the ``and no one else". We abbreviate
+$\val{P}$ into $P$: e.g. $B$ denotes the proposition that Bush
+(and possibly someone else) is on TV, and $B^{*}$ the proposition
+that Bush and no one else is on TV (ie $B \overline{F}\
+\overline{J}$).}
+
+\input{figure1}
+
+By hypothesis, the actual world $w$ is contained in $B^{*}$. If it
+is part of the common ground that exactly one person is on TV,
+then all possibilities outside $B^{*}$, $F^{*}$ and $J^{*}$ are
+excluded when the dialogue starts. Schaffer does not specify in
+which order the questions are asked. This matters of course, since
+questions, like assertions, can change the context. In particular,
+they can change the range of alternatives the attitude holder is
+aware of, and likewise the range of alternatives considered
+relevant by the ascriber. For simplicity, we consider the
+situation statically first, and assume that the total state of
+knowledge of the agent can be represented as in Figure 1, taking
+into account the three possibilities all at once. {\bf I don't understand what  you mean by the total state of knowledge. Is it $K_w$, but then the possibilities are two. Or does it include also $J^{*}$? But then maybe   we could add a second figure with only $B^{*}$, $F^{*}$ and $J^{*}$.}
+ 
+%and
+%assume that the three answers $B^{*}$, $J^{*}$ and $F^{*}$ are
+%equally relevant.
+\ Let $K_w$ denote the set of worlds compatible with the beliefs
+of the agent (call him S) who is asked the question at $w$. We
+assume the standard truth conditions for knowing-\emph{that},
+namely:
+
+\ex. ``S knows that P" is true in $w$ iff $K_w \subseteq P$
+
+One way of representing the scenario Schaffer has in mind is to
+suppose that $K_{w} \subseteq B^{*}\cup F^{*}$, but $K_{w}
+\nsubseteq B^{*}$ and $K_{w}\nsubseteq F^{*}$. That is, S thinks
+that one of Bush or Ferrell is on TV, but doesn't know which.
+Consequently, S knows that the person on TV is not Janet Jackson,
+since her belief set excludes any Janet world.
+
+It is clear in what sense S does not know whether Bush or Ferrell
+is on television, since S's belief set entails neither $B^{*}$ nor
+$F^{*}$, but overlaps both. But in what sense can it be said that
+S knows whether it is Bush or Janet Jackson? Schaffer's idea here
+is that if S were to choose between the two incompatible answers
+``Bush is on TV", and ``Janet Jackson is on TV", then S would
+choose the first. In other words, if S can ignore the possibility
+that it might be Ferrell, then her belief state would be contained
+entirely in $B^{*}$. On a first approximation, this suggests the
+following truth-conditions for knowing-\emph{whether} with
+alternative questions:
+
+\ex. \label{wh} ``S knows whether A or B" is true in $w$ iff
+$K_{w}\cap(A \cup B) \subseteq A$ or $K_{w}\cap(A \cup B)
+\subseteq B$
+
+These truth-conditions are faithful to Schaffer's contextualist
+idea. In particular, \ref{wh} entails that S knows whether it is
+Bush or Janet Jackson who is on TV, since $K_{w}\cap (B \cup
+J)\subseteq B$. But S does not know whether it is Bush or Ferrell
+who is on TV, since $K_{w}\cap(B \cup F)\nsubseteq B$ and
+$K_{w}\cap(B \cup F)\nsubseteq F$. This analysis can be made
+compositional if we suppose, as Schaffer does, that for an
+alternative question Q of the form ``whether A or B", the meaning
+of Q is defined directly as the set of potential answers $\{A,
+B\}$.\footnote{See Schaffer 2005, fn. 9. This way of defining the
+meaning of a question, as the set of possible answers, is closer
+to Hamblin's 1973 than to either Karttunen's or Groenendijk and
+Stokhof's.}  Let \val{Q}($w$) denote which of those alternatives is
+true in $w$. Then \ref{wh} can be rephrased as:
+
+ 
+
+{\bf What I don't like about (17)-(19) is that they only hold for alternative questions, but since we use Q rather than $?A \vee B$ there is the suggestion that they hold in general, for example also for constituent questions. So either (i) we make them general (but we need to change the interpretation of $\val{Q}(w)$ because for constituent question we don't have a unique true alternative, or (ii) we change notation. In the following paragraph a proposal to modify the last paragraph to make the analysis  general:
+
+This analysis can be made
+compositional if we suppose, as Schaffer does, that for an
+alternative question Q of the form ``whether A or B", the meaning
+of Q is defined directly as the set of potential answers $\{A,
+B\}$.\footnote{See Schaffer 2005, fn. 9. This way of defining the
+meaning of a question, as the set of possible answers, is closer
+to Hamblin's 1973 than to either Karttunen's or Groenendijk and
+Stokhof's.}    For polar and constituent questions we assume the standard Hamblin's (1973) denotation (see Appendix).  Let \val{Q}($w$) denote the true (exhaustive) answer to the question. Then \ref{wh} can be rephrased as:}
+
+\ex. \label{cd} ``S knows Q" is true in $w$ iff $K_{w}\cap
+(\cup\val{Q}) \subseteq \val{Q}(w)$
+
+
+ 
+%
+By contrast, the truth-conditions given initially in \ref{ws} for
+knowing-\emph{wh} were of the form:
+
+\ex. \label{cf} ``S knows Q" is true in $w$ iff $K_{w} \subseteq
+\val{Q}(w)$
+
+%
+
+\noindent The difference is that in \ref{cd} the ascription of
+knowledge is context-dependent, and more precisely, it is
+dependent on the question itself. Moreover, the truth-conditions
+of \ref{cd} no longer validate (CV), since precisely from
+\val{Q}($w$)=\val{Q'}($w'$), it needn't follow that
+$\cup\val{Q}=\cup\val{Q'}$.
+
+The general pattern underlying \ref{cd} is of the form:
+
+\ex. \label{gen} ``S knows Q" is true in $w$ with respect to $X$
+iff $K_w \cap X \subseteq \val{Q}(w)$
+
+In agreement with Schaffer, the parameter $X$ represents a
+contextual restriction of the background of possibilities relevant
+for the answer. In \ref{cd} this restriction is derived directly
+from the semantics of the alternative question (and therefore the
+restriction does not appear on the left hand side of the
+equivalence). This may be too drastic, however, since this
+analysis predicts that the order in which the questions are asked
+will not matter. Suppose S is asked first whether it is Bush or
+Janet Jackson. Then there are two possibilities. Either S is not
+yet entertaining the possibility that it might be Ferrell, and
+blindly answers: ``Bush". Or S is aware of the possibility that it
+might be Ferrell, but understands that the correct answer is
+either ``Bush" or ``Janet Jackson". {\bf I think that if he is aware of the possibility that it is farrell he should and would not answer Bush. \ref{gen} can account for this, because X can be larger than the question denotation. Therefore I propose to change this section and indicated in the next page, but I am not really sure. }  Either way, the ascriber, who
+knows the correct answer, can say: ``S knows whether it is Bush or
+Janet Jackson".
+
+But let us imagine that S is asked first whether it is Bush or
+Ferrell. This time, S answers: ``I don't know". Then S is asked
+whether it is Bush or Janet Jackson. It is not obvious that S will
+answer: ``it is Bush", if S still entertains the possibility that
+it might be Ferrell. In other words, assuming $X=B\cup F\cup J$
+when the second question is asked (namely that the three
+alternatives are relevant), then it is no longer true that $K_w
+\cap X \subseteq B$. In that situation, the best answer S can give
+is: ``at any rate, it is not Janet Jackson", since $K_w \cap
+(B\cup F\cup J)$ still excludes $J$. But that answer may not be
+sufficient to say that S knows whether it is Bush or Janet
+Jackson. With respect to the question: ``who is on TV?", the
+answer ``it is not Janet Jackson" is what Groenendijk and Stokhof
+call a \emph{partial answer}, since it rules out some alternatives but does not select one cell in
+the partition induced by the question. But knowing that Janet
+Jackson is not on TV is not sufficient in general to know who is
+on TV.
+
+%More generally, the analysis in \ref{cd} loses the entailment from
+%``S knows whether Bush or Janet Jackson is on TV" to ``S knows who
+%is on TV". For \ref{cd} predicts that S knows whether it is Bush
+%or Jackson, and does not know whether it is Bush or Ferrell, but
+%from the latter it should follow that S does not know who is on
+%TV.
+
+%More generally,
+%without corresponding modifications on the analysis of
+%who-questions,
+%the analysis in \ref{cd} also loses the entailment from ``S knows
+%whether Bush or Janet Jackson is on TV" to ``S knows who is on
+%TV", unless
+
+For an analysis like \ref{cd} to work, one would have to suppose
+that the subject S, when asked an alternative question of the form
+``is it A or B?", systematically accommodates the presupposition
+that one and only one of the two alternatives is true.\footnote{A
+similar objection was made to Schaffer by J. Stanley and another
+participant at the Aberdeen Conference on Linguistics and
+Epistemology, 2007.} But this may not always be the case. Suppose,
+to use Dretske's notorious example, that a skeptic first asks:
+``is it a zebra or a horse?". I answer: ``a zebra". He pursues:
+``but is it a zebra, or a cleverly painted mule?". I answer: ``I
+don't know". Then the skeptic reiterates: ``so is it a zebra, or a
+horse?". Here, the best answer can only be: ``not a horse"
+(assuming I remain confident about this), for in that state the
+skeptic undercuts the invitation to consider that exactly one of
+the two answers is true. This suggests that \ref{cd} should be
+revised in a way that integrates the dynamics of questions and the
+order in which they introduce alternatives.
+
+ 
+
+ 
+
+\paragraph{ALTERNATIVE PROPOSAL FROM EXAMPLE (19) } 
+
+  
+In agreement with Schaffer, the parameter $X$ represents a
+contextual restriction of the background of possibilities relevant
+for the answer. In \ref{cd} this restriction is derived directly
+from the semantics of the alternative question (and therefore the
+restriction does not appear on the left hand side of the
+equivalence).  
+
+
+This may be too drastic, however, since other factors beside the embedded question can influence the set  $X$ of   relevant alternatives. 
+Suppose, for example, that S is wondering whether it is Bush or Will Ferrell on TV, and someone asks him
+whether it is Bush or Janet Jackson.  It is not obvious that S will
+answer: ``it is Bush". Most probably, she will answer: ``at any rate, it is not Janet Jackson".   With respect to the question: ``who is on TV?", the
+answer ``it is not Janet Jackson" is what Groenendijk and Stokhof
+call a \emph{partial answer}, since,  although it rules out some alternatives, it does not select only one cell in
+the partition induced by the question. Knowing that Janet
+Jackson is not on TV is not sufficient in general to know who is
+on TV.
+Intuitively, therefore, we wouldn't say that S knows whether it is Bush or Janet Jackson on TV in this situation. The analysis  in
+\ref{cd},  however, makes the opposite prediction.  Relative to $X= \cup[Q] =B\cup  J$, it holds   that $K_w
+\cap X \subseteq B$. To match our intuition we need a larger set 
+of relevant alternatives that includes  $F$. Assuming $X=B\cup J\cup F$, then   it is no longer true that $K_w
+\cap X \subseteq B$. We would then have an account of S's partial answer in this situation.
+
+For an analysis like \ref{cd} to work, one would have to suppose
+that the subject S, when asked an alternative question of the form
+``is it A or B?", systematically accommodates the presupposition
+that one and only one of the two alternatives is true.\footnote{A
+similar objection was made to Schaffer by J. Stanley and another
+participant at the Aberdeen Conference on Linguistics and
+Epistemology, 2007.} But as the previous example showed, this may not always be the case. As a further illustration, suppose,
+to use Dretske's notorious example, that a skeptic first asks:
+``is it a zebra or a horse?". I answer: ``a zebra". He pursues:
+``but is it a zebra, or a cleverly painted mule?". I answer: ``I
+don't know". Then the skeptic reiterates: ``so is it a zebra, or a
+horse?". Here, the best answer can only be: ``not a horse" 
+(assuming I remain confident about this), for in that state the
+skeptic undercuts the invitation to consider that exactly one of
+the two answers is true. This suggests that \ref{cd} should be
+revised in a way that integrates the dynamics of questions and the
+order in which they introduce alternatives.
+ 
+
+ 
+
+
+\noindent {\bf END FIRST ALTERNATIVE}
+
+\paragraph{SECOND SHORTER ALTERNATIVE}
+
+In agreement with Schaffer, the parameter $X$ represents a
+contextual restriction of the background of possibilities relevant
+for the answer. In \ref{cd} this restriction is derived directly
+from the semantics of the alternative question (and therefore the
+restriction does not appear on the left hand side of the
+equivalence).  
+This may be too drastic, however, since other factors beside the embedded question can influence the set of   alternatives relevant for knowledge ascription. 
+Suppose, for example, that S is wondering whether it is Bush or Ferrell on TV, and someone asks him
+whether it is Bush or Janet Jackson. It is not obvious that S will
+answer: ``it is Bush", contrary to what \ref{cd} would predict.  
+
+ 
+
+For an analysis like \ref{cd} to work, one would have to suppose
+that the subject S, when asked an alternative question of the form
+``is it A or B?", systematically accommodates the presupposition
+that one and only one of the two alternatives is true.\footnote{A
+similar objection was made to Schaffer by J. Stanley and another
+participant at the Aberdeen Conference on Linguistics and
+Epistemology, 2007.} But this may not always be the case. Suppose,
+to use Dretske's notorious example, that a skeptic first asks:
+``is it a zebra or a horse?". I answer: ``a zebra". He pursues:
+``but is it a zebra, or a cleverly painted mule?". I answer: ``I
+don't know". Then the skeptic reiterates: ``so is it a zebra, or a
+horse?". Here, the best answer can only be: ``not a horse"\footnote{The answer ``it is not an horse" is what Groenendijk and Stokhof
+call a \emph{partial answer}, since it does not select one cell in
+the partition induced by the question. Knowing a partial answer to Q is not sufficient to know Q.}
+(assuming I remain confident about this), for in that state the
+skeptic undercuts the invitation to consider that exactly one of
+the two answers is true. This suggests that \ref{cd} should be
+revised in a way that integrates the dynamics of questions and the
+order in which they introduce alternatives.
+ 
+\noindent {\bf END SECOND ALTERNATIVE}
+ 
+\paragraph{}
+In the Appendix, we present a dynamic system with
+context-sensitive truth conditions for knowledge attributions
+along the lines of \ref{gen}, which is aimed to capture precisely
+this phenomenon. The truth-conditions we obtain differ from
+\ref{cd} in three respects. First, the contextual restriction for
+knowing-\emph{wh} is not simply a function of the embedded
+question; rather, it is a function of the question under
+discussion, in agreement with Schaffer's own account, namely of
+the alternatives judged relevant by the ascriber, even though the
+embedded question remains an input to the question under
+discussion. Secondly, this contextual restriction is defined in an
+incremental way, relative to the previous questions under
+discussion in the conversation, in order to model the dynamics of
+conversation. Finally, the meaning of embedded questions remains
+defined in terms of the partition induced by the question, but
+partitions are derived from a Hamblin style definition of the
+denotation of questions. The system allows us to implement
+Schaffer's contextualist idea, but in a sense we predict more
+context-sensitivity than Schaffer suggests. In particular,
+Schaffer seems to consider that even if the alternatives consist
+of Bush, Ferrell and Janet Jackson, ``virtually anyone (with
+decent vision and minimal cultural background) can know whether it
+is Bush or Janet Jackson". In our approach, assuming that S's
+belief set is as in Figure 1, this is so only if the alternatives
+are restricted to Bush and Jackson, or otherwise if
+knowing-\emph{wh} is given the weak sense of knowing a partial
+answer to the question.

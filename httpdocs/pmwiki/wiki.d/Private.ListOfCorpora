@@ -1,0 +1,43 @@
+version=pmwiki-2.2.0-beta65 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3
+author=radek
+charset=ISO-8859-1
+csum=adding info about the Czech National Corpus
+ctime=1213695701
+host=129.125.149.187
+name=Private.ListOfCorpora
+rev=10
+targets=
+text=* '''Italiano'''%0a** CORIS/CODIS http://corpora.dslo.unibo.it/ (written)%0a** CLIPS http://www.clips.unina.it (spoken)%0a** LABLITA: http://lablita.dit.unifi.it/corpora/descriptions/lablita/adult/ (spoken)%0a%0a* '''German'''%0a** DWDS-Korpus http://www.dwds.de/ (written and spoken)%0a** Datenbank Gesprochenes Deutsch (IDS) http://dsav-wiss.ids-mannheim.de/DSAv/DSAVINFO.HTM (spoken)%0a** Grimm Woerterbuch online http://germazope.uni-trier.de/Projects/DWB%0a** Thesaurus Indogermanischer Text- und Sprachmaterialien (TITUS) http://titus.uni-frankfurt.de/indexe.htm (diachron)%0a** Bonner Frueneuhochdeutsch Korpus http://virt052.zim.uni-duisburg-essen.de/Fnhd/ (diachron 1350- 1700)%0a** Mittelhochdeutsche Begriffsdatenbank http://mhdbdb.sbg.ac.at:8000/ (diachron)%0a** Bibliotheca Germanica http://www.hs-augsburg.de/~harsch/germanica/Chronologie/d_chrono.html (diachron 8th/20th cent. text%0a   collect.)%0a** Digitales Mittelhochdeutsches Textarchiv http://mhgta.uni-trier.de/index.html (diachron)%0a%0a* '''English'''%0a** British Academic Spoken English Corpus http://ahds.ac.uk/ictguides/projects/project.jsp?projectId=200%0a** British National Corpus http://www.natcorp.ox.ac.uk/ (written and spoken)%0a** The newsbooks at Lancaster http://www.lancs.ac.uk/fass/projects/newsbooks/default.htm (diachron 1654-1655)%0a** The Oxford Text Archive http://ota.oucs.ox.ac.uk/catalogue/index-id.html (diachron)%0a** Corpus of Middle English Prose and Verse http://quod.lib.umich.edu/c/cme/ %0a** Renaissance Electronic Texts http://www.library.utoronto.ca/utel/ret/ret.html (diachron 16th/17th cent.)%0a%0a* '''Dutch''' %0a** Dutch Parole Corpus http://parole.inl.nl/html/index.html (written)%0a** Rechtshistorische Teksten http://www.kuleuven-kortrijk.be/facult/rechten/Monballyu/Rechtlagelanden/Homepage.htm (diachron)%0a%0a* '''Spanish'''%0a** Corpus del Espanol http://www.corpusdelespanol.org/ (diachron 1100- 1900)%0a%0a* '''Russian''' %0a** The Uppsala Russian Corpus http://www.slaviska.uu.se/korpus.htm (written)%0a%0a* '''Czech'''%0a** Czech National Corpus http://ucnk.ff.cuni.cz/english/index.html (various subcorpora: written/spoken, synchronic/diachronic)
+time=1223643570
+author:1223643570=radek
+csum:1223643570=adding info about the Czech National Corpus
+diff:1223643570:1222089894:minor=33,36c33%0a%3c ** The Uppsala Russian Corpus http://www.slaviska.uu.se/korpus.htm (written)%0a%3c %0a%3c * '''Czech'''%0a%3c ** Czech National Corpus http://ucnk.ff.cuni.cz/english/index.html (various subcorpora: written/spoken, synchronic/diachronic)%0a\ No newline at end of file%0a---%0a> ** The Uppsala Russian Corpus http://www.slaviska.uu.se/korpus.htm (written)%0a\ No newline at end of file%0a
+host:1223643570=129.125.149.187
+author:1222089894=
+diff:1222089894:1218629341:=2a3,4%0a> ***username: aloni%0a> ***password: escollis%0a
+host:1222089894=145.18.66.27
+author:1218629341=
+diff:1218629341:1213888234:=3,4d2%0a%3c ***username: aloni%0a%3c ***password: escollis%0a
+host:1218629341=145.18.66.27
+author:1213888234=
+diff:1213888234:1213888157:=
+host:1213888234=145.18.66.164
+author:1213888157=
+diff:1213888157:1213790232:=1a2%0a> %0a16a18%0a> %0a27a30%0a> %0a
+host:1213888157=145.18.66.164
+author:1213790232=
+diff:1213790232:1213790199:=29c29%0a%3c ** Rechtshistorische Teksten http://www.kuleuven-kortrijk.be/facult/rechten/Monballyu/Rechtlagelanden/Homepage.htm (diachron)%0a---%0a> ** Rechtshistorische Teksten http://www.kuleuven-kortrijk.be/facult/rechten/Monballyu/Rechtlagelanden/Homepage.htm (diacrhron)%0a
+host:1213790232=145.18.66.164
+author:1213790199=
+diff:1213790199:1213786580:=9a10%0a> %0a14,18c15,16%0a%3c ** Bibliotheca Germanica http://www.hs-augsburg.de/~harsch/germanica/Chronologie/d_chrono.html (diachron 8th/20th cent. text%0a%3c    collect.)%0a%3c ** Digitales Mittelhochdeutsches Textarchiv http://mhgta.uni-trier.de/index.html (diachron)%0a%3c %0a%3c %0a---%0a> %0a> %0a21a20%0a> %0a27,36c26,28%0a%3c * '''Dutch''' %0a%3c ** Dutch Parole Corpus http://parole.inl.nl/html/index.html (written)%0a%3c ** Rechtshistorische Teksten http://www.kuleuven-kortrijk.be/facult/rechten/Monballyu/Rechtlagelanden/Homepage.htm (diacrhron)%0a%3c %0a%3c %0a%3c * '''Spanish'''%0a%3c ** Corpus del Espanol http://www.corpusdelespanol.org/ (diachron 1100- 1900)%0a%3c %0a%3c * '''Russian''' %0a%3c ** The Uppsala Russian Corpus http://www.slaviska.uu.se/korpus.htm (written)%0a\ No newline at end of file%0a---%0a> %0a> * '''Spnaish'''%0a> ** Corpus del Espanol http://www.corpusdelespanol.org/ (diachron 1100- 1900)%0a\ No newline at end of file%0a
+host:1213790199=145.18.66.164
+author:1213786580=
+diff:1213786580:1213782822:=10d9%0a%3c %0a13,16c12,13%0a%3c ** Bonner Frueneuhochdeutsch Korpus http://virt052.zim.uni-duisburg-essen.de/Fnhd/ (diachron 1350- 1700)%0a%3c ** Mittelhochdeutsche Begriffsdatenbank http://mhdbdb.sbg.ac.at:8000/ (diachron)%0a%3c %0a%3c %0a---%0a> %0a> %0a19,28c16%0a%3c ** British National Corpus http://www.natcorp.ox.ac.uk/ (written and spoken)%0a%3c %0a%3c ** The newsbooks at Lancaster http://www.lancs.ac.uk/fass/projects/newsbooks/default.htm (diachron 1654-1655)%0a%3c ** The Oxford Text Archive http://ota.oucs.ox.ac.uk/catalogue/index-id.html (diachron)%0a%3c ** Corpus of Middle English Prose and Verse http://quod.lib.umich.edu/c/cme/ %0a%3c ** Renaissance Electronic Texts http://www.library.utoronto.ca/utel/ret/ret.html (diachron 16th/17th cent.)%0a%3c %0a%3c %0a%3c * '''Spnaish'''%0a%3c ** Corpus del Espanol http://www.corpusdelespanol.org/ (diachron 1100- 1900)%0a\ No newline at end of file%0a---%0a> ** British National Corpus http://www.natcorp.ox.ac.uk/ (written and spoken)%0a\ No newline at end of file%0a
+host:1213786580=145.18.66.164
+author:1213782822=
+diff:1213782822:1213695701:=8,16c8,9%0a%3c ** DWDS-Korpus http://www.dwds.de/ (written and spoken)%0a%3c ** Datenbank Gesprochenes Deutsch (IDS) http://dsav-wiss.ids-mannheim.de/DSAv/DSAVINFO.HTM (spoken)%0a%3c ** Grimm Woerterbuch online http://germazope.uni-trier.de/Projects/DWB%0a%3c ** Thesaurus Indogermanischer Text- und Sprachmaterialien (TITUS) http://titus.uni-frankfurt.de/indexe.htm (diachron)%0a%3c %0a%3c %0a%3c * '''English'''%0a%3c ** British Academic Spoken English Corpus http://ahds.ac.uk/ictguides/projects/project.jsp?projectId=200%0a%3c ** British National Corpus http://www.natcorp.ox.ac.uk/ (written and spoken)%0a\ No newline at end of file%0a---%0a> %0a> * '''English'''%0a\ No newline at end of file%0a
+host:1213782822=145.18.66.164
+author:1213695701=Maria
+diff:1213695701:1213695701:=1,9d0%0a%3c * '''Italiano'''%0a%3c %0a%3c ** CORIS/CODIS http://corpora.dslo.unibo.it/ (written)%0a%3c ** CLIPS http://www.clips.unina.it (spoken)%0a%3c ** LABLITA: http://lablita.dit.unifi.it/corpora/descriptions/lablita/adult/ (spoken)%0a%3c %0a%3c * '''German'''%0a%3c %0a%3c * '''English'''%0a\ No newline at end of file%0a
+host:1213695701=145.18.66.27

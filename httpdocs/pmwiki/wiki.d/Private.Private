@@ -1,0 +1,42 @@
+version=pmwiki-2.2.0-beta65 ordered=1 urlencoded=1
+agent=Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; InfoPath.1; .NET CLR 3.0.04506.648)
+author=
+charset=ISO-8859-1
+csum=
+ctime=1213347756
+host=145.18.66.164
+name=Private.Private
+rev=10
+targets=Private.Project-meetings,Private.Corpora,Private.Typological-table,Private.Toolbox
+text=Welcome to the private pages of our project. Please follow the links to find info on the following topics:%0a%0a %0a*[[project-meetings]]%0a*[[corpora]]%0a*[[typological-table]]%0a*[[toolbox]]%0a%0a%0a%0a%0a%0a%0a
+time=1222085598
+author:1222085598=
+diff:1222085598:1213884896:=
+host:1222085598=145.18.66.164
+author:1213884896=Maria
+diff:1213884896:1213881235:=5c5%0a%3c *[[corpora]]%0a---%0a> *[[list of corpora]]%0a
+host:1213884896=145.18.66.27
+author:1213881235=Maria
+diff:1213881235:1213697438:=6d5%0a%3c *[[typological-table]]%0a
+host:1213881235=145.18.66.27
+author:1213697438=Maria
+diff:1213697438:1213697420:=11,13c11,21%0a%3c %0a%3c %0a%3c  %0a\ No newline at end of file%0a---%0a> this would be the group page explaining what the group is about%0a> %0a> Suppose you want to make a new private group, MariaStuff%0a> %0a> * First, put something at @@MariaStuff/MariaStuff@@ (that's the group description page, putting text there makes the group exist)%0a> * Next, go to @@MariaStuff/GroupAttributes&action=attr@@%0a> * A page will appear asking you to set some passwords. Set the read password, the rest don't matter%0a> * That's it!%0a> %0a> Attach:myfile.jpg%0a> %0a
+host:1213697438=145.18.66.27
+author:1213697420=Maria
+diff:1213697420:1213695353:=1,10d0%0a%3c Welcome to the private pages of our project. Please follow the links to find info on the following topics:%0a%3c %0a%3c  %0a%3c *[[project-meetings]]%0a%3c *[[list of corpora]]%0a%3c *[[toolbox]]%0a%3c %0a%3c %0a%3c %0a%3c %0a22c12%0a%3c  %0a\ No newline at end of file%0a---%0a> [[list of corpora]]%0a\ No newline at end of file%0a
+host:1213697420=145.18.66.27
+author:1213695353=
+diff:1213695353:1213348213:=10,12c10%0a%3c Attach:myfile.jpg%0a%3c %0a%3c [[list of corpora]]%0a\ No newline at end of file%0a---%0a> Attach:myfile.jpg%0a\ No newline at end of file%0a
+host:1213695353=145.18.66.27
+author:1213348213=
+diff:1213348213:1213348132:=
+host:1213348213=145.18.66.27
+author:1213348132=
+diff:1213348132:1213347970:=8,10c8%0a%3c * That's it!%0a%3c %0a%3c Attach:myfile.jpg%0a\ No newline at end of file%0a---%0a> * That's it!%0a\ No newline at end of file%0a
+host:1213348132=145.18.66.27
+author:1213347970=
+diff:1213347970:1213347756:=1,8c1%0a%3c this would be the group page explaining what the group is about%0a%3c %0a%3c Suppose you want to make a new private group, MariaStuff%0a%3c %0a%3c * First, put something at @@MariaStuff/MariaStuff@@ (that's the group description page, putting text there makes the group exist)%0a%3c * Next, go to @@MariaStuff/GroupAttributes&action=attr@@%0a%3c * A page will appear asking you to set some passwords. Set the read password, the rest don't matter%0a%3c * That's it!%0a\ No newline at end of file%0a---%0a> this would be the group page explaining what the gropu is about%0a\ No newline at end of file%0a
+host:1213347970=145.18.66.27
+author:1213347756=
+diff:1213347756:1213347756:=1d0%0a%3c this would be the group page explaining what the gropu is about%0a\ No newline at end of file%0a
+host:1213347756=145.18.66.27

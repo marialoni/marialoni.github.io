@@ -1,0 +1,76 @@
+ 
+% short for examples
+\newcommand{\es}{\enumsentence}
+\newcommand{\ees}{\eenumsentence}
+
+% double brackets.
+\newcommand{\lin}{\ensuremath{\lbrack\!\lbrack}}
+\newcommand{\rin}{\ensuremath{\rbrack\!\rbrack}}
+
+% bit and ben
+
+\newcommand{\bit}{\begin{itemize}} \newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}} \newcommand{\een}{\end{enumerate}}
+
+\newcommand\notext[1]{}
+
+
+% Sectionnumber.propositionnumber; and we do NOT use italics:
+
+
+\newtheorem{proposition}{Proposition}
+\newenvironment{prop}{\begin{proposition}\rm}{\end{proposition}}
+\newtheorem{definition}[proposition]{Definition}
+\newenvironment{defn}{\begin{definition}\rm}{\end{definition}}
+\newtheorem{lemma}[proposition]{Lemma}
+\newenvironment{lem}{\begin{lemma}\rm}{\end{lemma}}
+\newtheorem{corollary}[proposition]{Corollary}
+\newenvironment{cor}{\begin{corollary}\rm}{\end{corollary}}
+\newtheorem{fact}{Fact}
+\newenvironment{fct}{\begin{fact}\rm}{\end{fact}}
+
+\newenvironment{theo}{\begin{theorem}\rm}{\end{theorem}}
+
+
+\newcommand{\MAlin}{\ensuremath{\lbrack\!\lbrack}}
+\newcommand{\MArin}{\ensuremath{\rbrack\!\rbrack}}
+
+\newcommand{\MAben}{\begin{enumerate}}
+\newcommand{\MAeen}{\end{enumerate}}
+
+\newcommand{\MAbit}{\begin{itemize}}
+\newcommand{\MAeit}{\end{itemize}}
+
+
+
+\newcommand{\btar}{\begin{tabular}}
+\newcommand{\etar}{\end{tabular}}
+
+
+%%% questa e la definizione di supporto dinamico%%%
+
+\def\lmodels{\mathrel{\mid \!  \approx}}
+
+%%% queste sono le definizioni per gli up and down di mintague grammmar%%%
+
+\def\up{\mathord{\raisebox{.7ex}{$\scriptscriptstyle\wedge$}}}
+ \def\down{\mathord{\raisebox{.7ex}{$\scriptscriptstyle\vee$}}}
+
+%%% sto aggiungendo una def per poter usare il lap.bst %%%
+
+\gdef\bibname{Bibliography}
+
+%%% questa e la definizione di paul per gli interrogation games%%%
+
+
+\def\table#1#2#3#4#5#6#7#8{\btar{r|c|c|}
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\em #1} &
+\multicolumn{1}{c}{\em #2} \\ \cline{2-3}
+              {\em #3\/} & $(#5)$ & $(#6)$ \\ \cline{2-3}
+              {\em #4\/} & $(#7)$ & $(#8)$ \\ \cline{2-3} \etar}
+ \def\diagram#1#2#3#4#5#6{\btar{@{\ }c|c@{\ }c@{\ }c|}
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{\em #1} & &
+\multicolumn{1}{c}{\em #2} \\ \cline{2-4}
+              {\em #3\/} & #5 \\
+              {\em #4\/} & #6 \\ \cline{2-4} \etar}
+ \def\kl#1{{\scriptstyle #1}}

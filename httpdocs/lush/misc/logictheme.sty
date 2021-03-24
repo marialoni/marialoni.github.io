@@ -1,0 +1,105 @@
+\ProvidesPackage{logictheme}[2003/11/07 ver 0.93]
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+
+% Original theme
+% Copyright 2003 by Till Tantau <tantau@cs.tu-berlin.de>.
+%
+% This program can be redistributed and/or modified under the terms
+% of the LaTeX Project Public License Distributed from CTAN
+% archives in directory macros/latex/base/lppl.txt.
+
+
+\mode<presentation>
+
+
+                                % Standard templates
+\beamertemplatelargetitlepage
+\beamertemplatelargepartpage
+\beamertemplatelargeframetitle
+\beamertemplatelargeblocks
+\beamertemplateplaintoc
+
+                                % Head
+\useheadtemplate{%
+  \vbox{%
+    \vskip6pt%
+  %  \beamerline{\insertnavigation{\paperwidth}}%
+  %  \vskip1.5pt%
+  %  \insertvrule{0.4pt}{structure!50!averagebackgroundcolor}%
+   % \vskip1.5pt%
+    \tinyline{\color{structure}{\small{\insertsection}}\hfill}\vskip2pt%
+    \insertvrule{4pt}{structure!50!averagebackgroundcolor}%
+    }%
+  }
+
+                                % Footline
+\usefoottemplate{%
+  \vbox{%
+    \setbox\beamer@tempbox=\hbox{\tiny\insertshortauthor: \insertshorttitle\hskip1.5cm\insertshortinstitute}%
+    \ifdim\wd\beamer@tempbox>\paperwidth%
+    \insertvrule{4pt}{structure!50!averagebackgroundcolor}%
+    \vskip1.5pt
+    \tinyline{\color{structure}\insertshortauthor:\hfill\insertshortinstitute}%
+    \tinyline{\color{structure}\insertshorttitle\hfill\lower1pt\hbox{\insertnavigationsymbols}}%
+    \else%
+    \setbox\beamer@tempbox=\hbox{\beamerline{\hbox to\paperwidth{\hfill\lower1pt\hbox{\insertnavigationsymbols}}}}%
+    \ht\beamer@tempbox=0pt%
+    \box\beamer@tempbox%
+    \insertvrule{4pt}{structure!50!averagebackgroundcolor}%
+    \vskip1.5pt
+    \tinyline{\color{structure}\insertshortauthor: \insertshorttitle, \insertsubtitle\hfill\insertpagenumber}%
+    \fi}%
+  }
+
+\def\logo#1{%
+  \def\insertlogo{#1}%
+  \usefoottemplate{%
+    \vbox{%
+      \insertvrule{4pt}{structure!50!averagebackgroundcolor}%
+      \vskip1.5pt%
+      \setbox\beamer@logobox=\hbox{\lower1pt\hbox{\insertlogo}}%
+      \tinyline{\color{structure}\insertshortauthor:\hfill}%
+      \tinyline{\color{structure}\insertshorttitle\hfill\lower1pt\hbox{\insertnavigationsymbols}\hskip0.1cm\hbox{\dp\beamer@logobox=0pt\ht\beamer@logobox=0pt\box\beamer@logobox}
+        }%
+      }%
+    }%
+  }
+
+
+\userightsidebartemplate{0cm}{}
+
+%Modifications start here
+
+%First kill off navigation symbols, unwanted on transparencies
+	\beamertemplatenavigationsymbolsempty   
+
+%Now set the proportion of greying out of non-current sections
+%in toc with [current]; also choose bullet for toc.
+	\usetemplatetocsection[65!averagebackgroundcolor]{\color{beamerstructure}\raisebox{0.2ex}{\scriptsize{$\blacksquare$}}\quad\large\inserttocsection}
+	\usetemplatetocsubsection[65!averagebackgroundcolor]{\leavevmode\leftskip=1.5em\color{black}\inserttocsubsection\par}
+	    
+%Set subitem marker to be bullet    
+	\usesubitemizeitemtemplate{\small\hbox{\color{beamerstructure}$\bullet$}}
+
+%Now design title page
+
+\usetitlepagetemplate{
+    \vbox{}
+    \vfill
+    \begin{centering}
+      \insertinstitute\par\vskip1.25em       %% Comment out
+                                             %% if unwanted
+      {\Huge\structure{\inserttitle}}\par
+      \ifx\insertsubtitle\@empty\else\vskip0.5em{\Large{\structure{\insertsubtitle}}}\par\fi
+      \vskip2em\par
+      \normalsize\insertauthor\vskip1em\par
+      \insertdate\par\vskip1.5em
+      %\inserttitlegraphic\par
+    \end{centering}
+    \vfill
+  }
+
+
+\mode
+<all>
+ 

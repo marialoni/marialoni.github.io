@@ -1,0 +1,183 @@
+% double brackets.
+\newcommand{\lin}{\ensuremath{\lbrack\!\lbrack}}
+\newcommand{\rin}{\ensuremath{\rbrack\!\rbrack}}
+
+
+
+\section*{Appendix}
+
+
+ In this appendix we present a dynamic semantics for questions and
+their embedding under ``know". The system is one way of
+formalizing Schaffer's remarks on the dynamics of conversation,
+but making explicit the importance of the order in which questions
+are
+asked.
+
+\paragraph{Question representation} 
+
+Questions are represented  by   formulas of the form $?  p_1, ..., p_n \ \phi$ where ? is a query-operator, $p_1, ..., p_n$ is a possibly empty sequence of propositional variables, and $\phi$ is a formula of   predicate logic with   propositional variables.   Polar questions result when the query-operator binds no variable  (example \Next-a). Alternative questions are represented by   formulas like \Next-b which asks which of the propositions $\phi$ and $\psi$ is true. Formula \Next-c represents constituent questions.  It can be paraphrased as `which of the propositions   $ \phi(d),   \phi(d'),... $ are true?'.
+\ex.
+\a. Polar questions: $?  \phi$
+\b. Alternative questions: $?p ( p \wedge   (p=\phi \vee p=\psi)    )$
+\c. Constituent questions: $?p (p \wedge  \exists x (p=\phi(x)) )$
+
+
+\paragraph{Question denotation}
+Questions are mapped into sets of   pairs   $\langle \sigma,w\rangle$ where $\sigma=\alpha_1,...,\alpha_n$ is a   sequence of propositions and $w$ is a possible world. From such sets of pairs, representing the denotation of question $Q$, we will be able to recover (a) the partition induced by the question  and (b) the topics  set up by $Q$. In terms of partitions we will define various notions of answers. Topics will be used to model the contextual restriction  at work in Schaffer's examples.
+
+
+Let $\lin \phi\rin_{M,g}$ be the  proposition expressed by an indicative sentence $\phi$:\footnote{The satisfaction relation $\models$, assumed in \ref{prop},  is defined in a standard way. The only clause that deserves to be   mentioned is the one for propositional identity:
+ 
+ \ex. $M,w   \models_g  \phi=\psi \ $ iff $ \ \forall w': M,w'   \models_g  \phi $ iff $M,w'   \models_g \psi$ 
+
+}
+
+\ex. \label{prop} $\lin  \phi\rin_{M,g} = \{   w  \mid  \ M,w   \models_{g} \phi \}$. 
+ 
+Questions denotations are then defined as follows, where
+ $\vec{p}$ stands for the sequence $p_1,...,p_n$, and  $\vec{\alpha}$ for  the sequence $\alpha_1,...,\alpha_n$.  
+\ex. \label{qden} $\lin? \vec{p} \ \phi\rin_{M,g} = \{ \langle \vec{\alpha}, w\rangle \mid  \ w \in  \lin  \phi\rin_{M,g[\vec{p} / \vec{\alpha}  ]}  \}$ 
+ 
+ 
+  
+\noindent The denotation of a  polar question $?  \phi$ is the set of pairs $\langle  \lambda, w \rangle$ such that $\lambda$ is the empty sequence and $w$ satisfies $ \phi$.
+ The denotation of an alternative question $?p (p \wedge    (p=\phi \vee p=\psi))$ is the set of pairs $\langle  p, w \rangle$ such that $w$ satisfies $p$ and  $p$ is either the proposition expressed by $ \phi $ or  the proposition expressed by $  \psi $. And finally the denotation of a constituent question represented as  $ ?p ( p \wedge \exists x (p=\phi(x)) )$ is the set of pairs $\langle  p, w \rangle$ such that $w$ satisfies $p$ and $p=\lin \phi\rin_{M,g[x/d]} $ for some individual $d$. 
+
+    
+  
+\paragraph{Answers} The denotation   of a question  $Q$ determines
+an equivalence relation (or, equivalently, a partition) Part($Q$)
+over the set of possible worlds, from which different notions of
+answers can be defined. For $Q \ = \ ?\vec{p}  \ \phi$, two worlds $w$ and $v$ are in the same
+cell of Part($Q$) iff for each sequence of propositions $\vec{\alpha}$, $\langle \vec{\alpha}, w\rangle $   belongs to    the denotation of $Q$  iff $\langle \vec{\alpha}, v\rangle $ does as well. 
+
+\ex. Part$_{M,g}(?\vec{p}  \ \phi)$ =$\{\langle  w,v\rangle \mid  \forall \vec{\alpha}:      \langle \vec{\alpha}, w \rangle \in  \lin?\vec{p} \ \phi\rin_{M,g} $ iff  $ \langle \vec{\alpha} , v \rangle \in  \lin ?\vec{p} \ \phi\rin_{M,g} \}$  
+ 
+
+\noindent \emph{Exhaustive answers} to $Q$ correspond to cells in
+Part($Q$). The \emph{exhaustive true answer} to $Q$ in $w$ is the
+cell including $w$ in Part($Q$). Finally, \emph{partial answers}
+(true in $w$) correspond to non-trivial unions of cells of
+Part($Q$) (including $w$), namely unions of cells different from
+Part($Q$).
+
+
+\paragraph{Topics} In terms of a question denotation we can also define the topics set up by the question as follows:
+
+\ex. Top$_{M,g}(?\vec{p} \ \phi)$ = $\{  \vec{\alpha}  \mid \exists w:  
+  \langle  \vec{\alpha} , w\rangle  \in \lin ?\vec{p}  \ \phi\rin_{M,g}  \}$
+
+\noindent Topics are sets of (sequences of) propositions. These topics will be used in what follows to define the contextual restriction on the belief state of the subject of   knowledge-wh.
+\paragraph{Results:}
+
+\ex. Polar questions (``did John leave?")
+\a. Representation: $?\phi$
+\b. Partition: $\{\phi, \neg \phi\}$
+\b. Topics: $\{ \lambda\}$ (the set containing the empty sequence)
+
+
+\ex. Alternative questions (``did John leave, or did Mary leave?")
+\a. Representation: $?p ( p \wedge (p=\phi \vee p=\psi))$
+\b. Partition: $\{\phi \wedge \neg \psi, \neg \phi \wedge   \psi, \neg (\phi\vee \psi), \phi \wedge \psi\}$
+\b. Topics: $\{\phi,\psi\}$
+
+
+\ex. Constituent questions (``who left?")
+\a. Representation: $?p( p \wedge \exists x (p=\phi(x)))$
+\b. Partition: $\{\forall x  \neg \phi(x), \forall x (\phi \leftrightarrow x=d), ..., \forall x \phi(x)\}$
+\b. Topics: $\{\phi(d),\phi(d'), ...\}$
+
+
+\paragraph{Dynamics}
+
+
+A context $C$ is defined as an ordered pair whose first index
+$s_C$ is an information state (set of worlds), and whose second
+index $i_C$ is a sequence of question denotations (as defined above)  representing  the issues  under discussion in $C$. A context $C$ can be updated either by an assertion
+$P$, or by the introduction of a new question $Q$:
+
+\ex. \a. $C+P = (s_C \cap \lin P\rin, i_C)$
+\b. $C+Q= (s_C, i_C+\lin Q\rin)$
+
+Updating $C$ with an assertion $P$ only influence the state-index    eliminating those worlds in $s_C$ in which $P$ is false.  Updating with a question $Q$ extends the issue parameter by adding to $i_C$ the denotation of $Q$ as last issue under discussion.
+ 
+\paragraph{Knowledge} Let ANS$_w(Q)$ be the true exhaustive answer to $Q$ in $w$, and Top$(C)$ denote the union of the topics introduced by  all  the issues in $C$, i.e.  for $C= (s_c,\lin Q_1 \rin, ..., \lin Q_n \rin)$:
+Top$(C)$ = $\bigcup_{i\in n} $Top$(Q_i) \setminus \{\langle \rangle\}$.
+We then define knowledge as follows:
+
+\ex. ``S knows Q'' is true in world $w$ with respect to context $C$ iff 
+\a.[(i)] $K_w \ \cap\ $Top$(C) \ \subseteq \ $ANS$_w(Q)$,  \ \ if  Top$(C)\neq\emptyset$; 
+\b.[(ii)] $K_w   \ \subseteq \ $ANS$_w(Q)$,  \ \ otherwise.
+
+
+  
+
+
+ 
+
+%Or alternatively (prob equivalent) \ex. s knows Q wrt C in w iff
+%for all true partial answer $A$ $(K_w \cap QUD_C)$ entails A in w
+
+%(this second formulation would maybe allow us  to express partial
+%knowledge, and the following entailment (if we define not know $Q$
+%= for all  partial answers A not know (A)) :
+
+%\ex. not know  ?(A or B) $\Rightarrow$ not know ?A and not know  ?B
+
+\paragraph{Schaffer's example.} Let us take $s_C$ to be $\{w_{B^{*}}\}$, namely
+the actual world $w=w_{B^{*}}$ is a world in which only Bush is on
+TV; $K_w= \{w_{B^{*}}, w_{F^{*}}\}$, that is S's belief state is
+compatible with either only Bush being on TV, and only Ferrell
+being on TV. When the dialogue starts,  $i_C$   is empty. Let us write $ ?(\phi \vee_a \psi)$   for the longer  $?p ( p \wedge (p=\phi \vee p=\psi))$. The semantics
+derives the following predictions:
+
+\ex. \a. S knows whether it is Bush or Janet Jackson on TV. \b.
+true in $C + ?(B \vee_a J)$, but false in $C +  ? (B \vee_a J) + ?
+(B \vee_a F)$
+
+\ex. \a. S knows whether it is Bush or Ferrell on TV. \b. false in
+$C + ?(B \vee_a F)$, and likewise false in $C + ?(B \vee_a F) +
+?(B\vee_a J)$.
+
+\enlargethispage{1cm}
+
+\input{fig2}
+
+Figure 2 is another, more adequate way of looking at Figure 1 in
+order to represent the question ``is it Bush, or is it Janet
+Jackson?". Each cell in the partition induced by $?(B\vee_{a} J)$
+is itself partitioned into $F$-worlds (below the diagonal) and
+$\neg F$-worlds (above the diagonal). S's belief state $K_w$
+consists of the curved portion containing $w$ above the diagonal
+in the area $B\neg J \neg F$, together with the curved portion
+below the diagonal in the area $\neg B \neg J F$.
+
+Suppose S is asked first whether Bush or Janet Jackson is on TV.
+This updates $C$ with the question under discussion $?(B\vee_a
+J)$. Relative to that question, namely to the alternatives
+$\{B,J\}$, S can give the true exhaustive answer ``Bush and not
+Janet Jackson". Then $S$ is asked whether Bush or Ferrell is on
+TV. This increments the context with a new question under
+discussion, namely $?(B \vee_a F)$, which enlarges the space of
+relevant alternatives to $\{B,J,F\}$. This time, S's state $K_w$
+no longer supports the exhaustive answer ``Bush and not Jackson",
+for it also overlaps with the exhaustive answer ``neither Bush nor
+Jackson". In other words, S's belief state only supports the
+partial answer ``not Jackson".
+
+The notion of partial answer, it may be noted, remains consistent
+with Schaffer's intuition that the question ``is it Bush, or Janet
+Jackson?" is easier than the question ``is it Bush, or Ferrell?",
+since S can at least provide a partial answer to the first.
+
+The system predicts that ``S knows whether Bush or Ferrell is on
+TV" will come out true if the question under discussion is simply
+$?(B\vee_a J)$, namely ``is Bush or Janet Jackson on TV?". But
+this will not happen: for the background question under discussion
+should always include the question discussed in the knowledge
+report.
+
+
+
+ 

@@ -1,0 +1,1226 @@
+\documentclass{beamer}
+\usetheme[secheader]{Boadilla}
+\usefonttheme[]{serif}
+%\usepackage{misc/logictheme}
+\usepackage{misc/cgloss4e}
+\usepackage{misc/linguex}
+%\usepackage{misc/aloni}
+
+\newcommand\notext[1]{}
+
+\newcommand{\bit}{\begin{itemize}}
+\newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+ \newcommand{\btar}{\begin{tabular}}
+\newcommand{\etar}{\end{tabular}}
+
+% double brackets.
+\newcommand{\lin}{\ensuremath{\lbrack\!\lbrack}}
+\newcommand{\rin}{\ensuremath{\rbrack\!\rbrack}}
+
+
+
+%%% questa e la definizione di supporto dinamico%%%
+
+\def\lmodels{\mathrel{\mid \!  \approx}}
+
+%%% queste sono le definizioni per gli up and down di montague grammmar%%%
+
+\def\up{\mathord{\raisebox{.7ex}{$\scriptscriptstyle\wedge$}}}
+ \def\down{\mathord{\raisebox{.7ex}{$\scriptscriptstyle\vee$}}}
+
+%\newcommand{\leftpointright}{\ding{43}}
+
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+
+\def\lint{\lbrack\!\lbrack}
+\def\rint{\rbrack\!\rbrack}
+
+\title{Free choice: semantics and pragmatics
+}
+\author{Maria Aloni}
+\institute{University of Amsterdam\\
+{\texttt{\{M.D.Aloni\}@uva.nl}}
+ }
+\date{LUSH
+\\  17/4/2008}
+
+\RequirePackage{epsfig}
+ \catcode`_=\active
+\def_#1{\ifmmode\sb{#1}\else$\sb{#1}$\fi}
+
+\newcommand{\leftpointright}{\ding{43}}
+
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+
+
+\begin{document}
+
+%%-----------------------------------------------
+ %%-----------------------------------------------
+
+\frame{\titlepage}
+
+
+%% SLIDE
+%% ---------------------------------------
+
+\section{Overview}
+\frame
+{
+\frametitle{Overview}
+
+
+\ben
+ \notext{\pause} \item    Modal   and subtrigging effects   of Free Choice (FC) items:
+ \ex. \a.   \# Anyone fell.
+\b.   Anyone may fall. %\hfill  $\Rightarrow$     $\forall x \Diamond F(x)$ 
+\c.   Anyone who tried to jump fell.  \hfill ({\bf subtrigging})
+
+ \notext{  {\it Any}    felicitous in
+possibility statements, but needs   post-nominal modifier  in episodic sentences  {\sc subtrigging effect} LeGrand,
+1975).} 
+
+\notext{\pause}  \item  {\sc Empirical goal}: 
+
+\vspace{0,2cm}
+Explain distribution and meaning of FC \emph{any} in (1).
+
+ 
+
+\vspace{0,3cm}
+\notext{\pause}  \item {\sc Theoretical goal}:
+
+\vspace{0,2cm}
+Contribute to the ongoing debate on the grammar-pragmatics interface:
+
+ 
+\ex. Free  choice effect in (1b) and universal meaning in (1c): \bit
+\item Entailments (e.g. Dayal 1998) or \item  (Local) implicatures (e.g. Chierchia 2006)? \eit
+
+
+
+\een
+}
+
+\notext{FC phenomena have received a lot of attention in the recent literature.
+One of the reason is that they appear to constitute an important source of insights on the debate concerning the relationship between pragmatics and grammar. The theoretical goal of this talk is then to contribute to this debate by trying to give a principled answer to    questions like the one  in (2).}
+
+
+\frame{\frametitle{The classical analysis:  Dayal   1998}
+ 
+\bit
+\item  {\it Any} as wide scope  universal quantifier over possible individuals:
+ 
+  
+{\small 
+\ex. 
+\a. John  may read any book.
+\b. $\forall s \forall  x[$Book$(x,s)][ ! $Read$ (j,x,s)]$
+
+\vspace{-0,4cm}
+
+\ex. \a. \#John read any book.
+\b. $\forall s \forall  x[$Book$(x,s)][PAST_{s@}(s) \wedge $Read$ (j,x,s)]$
+
+\vspace{-0,4cm}
+
+\ex. \a.  John read any book he found.
+\b. $\forall s \forall  x[$Book$(x,s) \wedge \exists s'[s< s' \wedge PAST_{s@}(s') \wedge $Find$ (j,x,s')]]$ \\ $[PAST_{s@}(s) \wedge $Read$ (j,x,s)]$
+
+}
+ 
+
+`\LLast is unacceptable because one cannot  choose a domain that includes possible individuals and predicate something that is purely episodic of those individuals. 
+[\dots]
+ The temporal bound introduced by the relative clause in \Last restricts the domain appropriately.'
+ 
+ 
+
+ 
+\eit
+}
+ 
+
+\frame{\frametitle{Dayal   1998: problems}
+
+\bit
+\item {\it Any} doesn't seem to be a universal quantifier:
+
+\ex. To continue, push any key! \hfill [Giannakidou 2001]
+
+\item Explanation of subtrigging:  vague but also counterintuitive: 
+
+
+  
+ 
+
+\ex.   Maria inizi\`o  a bussare a qualsiasi porta avesse i  battenti in legno.
+\\
+'Mary started knocking to whatever door had$_{\sc SUB}$ wooden shutters'
+ 
+Subjunctive mood in subtrigging restrictions in Romance.
+ SUB cannot anchor tense back to actual world. 
+
+\eit
+}
+\frame{\frametitle{A first sketch of my  proposal (Aloni 2007)}
+ 
+ 
+ 
+
+  \ex.[(1)] \a.   \# Anyone fell.
+\b.   Anyone may fall.    \hfill $\Rightarrow$ $\forall x \Diamond F(x)$
+\c.   Anyone who tried to jump fell.   \hfill  $\Leftrightarrow$   $\forall x  (T(x) \to F(x))$ 
+ 
+
+\ben 
+\notext{\pause} \item FC  items are indefinite ({\it contra} Dayal)
+\notext{\pause} \item  Indefinites induce sets of  propositional  alternatives (Aloni 2002, K\&S 2002) 
+
+\notext{\pause} \item  FC \emph{any} requires the application of two  covert operators:
+\ex. $[\forall]$... {\bf exh} (... any ...)  
+
+\notext{\pause} \item  Contrast between  (1a)  and (1b) explained by interplay   between $[\forall]$, {\bf exh} and  the possibility operator  (Men\'endez-Benito 2005) 
+
+\notext{\pause} \item Subtrigging effects in (1c) explained by interactions  between $[\forall]$,  {\bf exh} and  
+  the post-nominal modifier 
+  
+  
+\notext{\pause} \item {\bf Speculation}:  A pragmatic origin for $[\forall]$ and {\bf exh}? 
+  
+  
+  \een 
+  
+  \notext{\notext{\notext{\pause}} \item  The  account in a nutshell:
+
+(a) is out because it universally quantify over mutually exclusive propositions. The modal in (b) and the modifier in
+(c) prevent  inconsistence because allow  {\bf Exh} to apply on a lower level.}
+  
+ }
+ \notext{There are by now a number of satisfactory explanation of the contrast between (a) and (b). Satisfactory means  distribution and the meaning get a uniform explanation. But no satisfactory explanation of (c) }
+ \frame
+{
+\frametitle{Structure of the talk}
+
+\ben \notext{\pause} \item Background:
+
+\bit
+ \item   `Hamblin'  semantics for indeterminate pronouns (K\&S 2002);
+ \item Men\'endez-Benito (2005) on \emph{any} in modal statements.
+ 
+ \eit
+ \notext{\pause} \item Proposal:  modal and subtrigging effects via exhaustification.
+ \bit
+ \notext{\pause} \item Tools:
+ \bit
+  \item Exhaustification (e.g. Zeevat);
+  \item Type-shift rules: {\sc shift}$_{e}$ \& {\sc shift}$_{\langle  s,t \rangle}$;
+
+ \eit
+ \notext{\pause} \item Applications:
+ \bit
+ \item    Free relatives and questions  (Jacobson 1995); 
+  \item   Subtrigging and modal effects of FC {\it any}.
+ 
+ \eit
+{\small  \item Core idea: parallelism   
+ \a.[] Free relatives $\Leftrightarrow$ Subtrigged case (1c)
+ \b.[]  Questions  $\Leftrightarrow$ Unsubtrigged cases (1a and 1b)
+ 
+ }
+ 
+ 
+ 
+\eit
+\notext{\pause} \item Speculation: a pragmatic origin for $[\forall]$ and  {\bf exh}.
+
+\een
+
+
+}
+
+\section{Background}
+
+\frame
+{\frametitle{`Hamblin'  semantics for indeterminate pronouns}
+\ben
+\notext{\pause} \item[]  {\sc Motivation}
+\bit
+\item
+ Explain variety of indefinites. E.g. 
+ \bit
+ \item English:
+   \emph{a}, \emph{some},  \emph{any}, \dots
+ \item Italian: \emph{un(o)},  \emph{qualche}, \emph{qualsiasi}, \emph{nessuno}, \dots   \eit \eit
+\notext{\pause} \item[]   {\sc How}
+\bit
+\notext{\pause} \item  Indefinites `introduce'    sets of propositional alternatives;
+\notext{\pause} \item These are bound by propositional operators:     $ [ \exists]$, $ [ \forall]$,   $[$Neg$]$, $[$Q$]$;
+\notext{\pause} \item  Different   indefinites    associate   with different     operators.  
+\eit
+\notext{\pause} \item[]  {\sc Examples}
+  %%\es{$\lin ${\it Someone/anyone/who fell}$\rin_{w,g}$  =  $\{$that $d_1$ fell, %%that $d_2$ fell,...$\}$}
+
+
+  \ex. \a. $[\exists]$ (someone  fell)  
+\b. $[\forall ]$ (anyone  fell) \hfill
+     e. {\scriptsize \btar{|c|c|c|c|}  \hline $d_1$ fell  &   $d_2$ fell  & $d_3$ fell & ...
+ \\
+  \hline
+\etar
+  }
+ \b.  $[$Q$]$ (who fell)  
+\b.  $[$Neg$]$ (nessuno cadde)   
+
+ \notext{   $[$Neg$]$: n-words: Italian {\it nessuno},... \item
+$[$Q$]$: wh-words: English {\it who},... \item  $ [ \exists]$: existential Fc items: German {\it irgendein} \item
+$[\forall ]$: universal FC items: English {\it any}, Italian {\it qualunque} } 
+
+\een }
+
+\frame
+{\frametitle{A closer look}
+\bit
+\notext{\pause} \item In a Hamblin semantics,  all expressions denote sets.
+
+\notext{\pause} \item Mostly singleton sets of traditional
+denotations. E.g.
+
+\ex. $\lin${\bf  fell}$\rin_{w,g}$= $\{\lambda x \lambda w'.   ${\sc fell}$(x)(w')\}$ 
+
+\notext{\pause} \item Indefinites map to  multi-membered sets of alternatives. E.g.
+
+\ex.  $\lin ${\bf someone/anyone/who}$ \rin_{w,g}= \{x \mid ${\sc human}$(x)(w)\}$ 
+
+  \notext{\pause} \item  Via pointwise
+functional application, these individual alternatives  expand into    propositional alternatives:
+
+\ex.  $\lin ${\bf fell}$\rin_{w,g}$($\lin ${\bf someone/anyone/who}$\rin_{w,g}$) =   $\{$that $d_1$ fell, that $d_2$ fell, that $d_3$ fell,...$\}$ 
+
+\notext{\pause} \item Until they reach one of the propositional operators. E.g.%   $[$Neg$]$,  $ [ \exists]$, $ [ \forall]$, $[$Q$]$.
+
+
+\ex. $ [\forall]$($\lin${\bf fell}$\rin_{w,g}$($\lin ${\bf anyone}$\rin_{w,g}$) )=   $\{$that everyone fell$\}$ 
+
+
+ \notext{\ees{\item $\lin ${\it A  woman fell}$\rin_{w,g}$ =  [$\exists$] ($\{$that $d_1$ fell, that $d_2$ fell,...$\}$)
+
+\item $\lin ${\it Which  woman fell}$\rin_{w,g}$ =  [Q] ($\{$that $d_1$ fell, that $d_2$ fell, that $d_3$ fell,...$\}$)
+\item ...}
+ }
+
+\eit }
+
+\frame
+{\frametitle{{\it Any}: naif account}
+
+\bit
+\item {\small [$\forall$] quantifies over  propositional alternatives.}
+\eit
+  \ex.\label{naif} \a. $[\forall]$(anyone fell) \hfill
+    {\scriptsize \btar{|c|c|c|c|}  \hline $d_1$ fell  &   $d_2$ fell  & $d_3$ fell & ...
+ \\
+  \hline
+\etar
+  } \\ \vspace{0,2cm} {\it Predicted meaning:} $\forall x   F(x)$   
+  \\ $ \; $ \\
+ \b.  $[\forall]$(anyone may fall)  \hfill
+  {\scriptsize \btar{|c|c|c|c|}  \hline $\Diamond $ $d_1$ fall  &  $\Diamond $ $d_2$ fall  & $\Diamond $ $d_3$ fall & ...
+ \\
+  \hline
+\etar
+  }  \\ \vspace{0,2cm}   {\it Predicted meaning:}  $  \forall x \Diamond F(x)$ 
+  \\ $ \; $ \\ \b.   $[\forall]$(anyone
+who tried to jump fell) \hfill
+   {\scriptsize \btar{|c|c|}  \hline $d_1$ fell  &     $d_2$ fell     \\
+ \hline
+\etar
+  }
+\\ \vspace{0,2cm}  {\it Predicted meaning:} $\forall x(T(x) \to F(x))$  
+
+\bit
+\item {\sc Merits:} captures universal meaning of (c);
+\item {\sc Problems:}
+   doesn't explain (a)  \&  dubious truth-conditions for (b):
+
+ \vspace{0,1cm}
+
+ {\small E.g. suppose only two options: (i) nobody falls; (ii) everybody falls. Then (b) would be true against intuitions [Men\'endez-Benito 2005].}
+
+\notext{
+{\small
+
+\es{You may take any of the cards.  \label{canasta} \hfill [Men\'endez-Benito 2005]}
+Suppose only two options: (i) take no cards (ii) take all cards. Then (\ref{canasta}) would be true against intuitions.}}
+\eit
+
+}
+
+
+\frame
+{\frametitle{{\it Any}: Men\'endez-Benito account}
+\bit
+ \item {\small {\bf Excl} transforms Hamblin alternatives into    sets of mutually exclusive propositions.}
+ \eit
+
+\ex. \label{mb}
+\a. $[\forall]$({\bf Excl}(anyone fell)) 
+\  \hfill
+ {\scriptsize \btar{|c|c|c|c|}  \hline    only $d_1$ fell  &  only  $d_2$ fell    & ...
+ \\
+  \hline
+\etar
+  }
+  \\ \vspace{0,2cm}  {\it Predicted meaning:} $\forall x$ {\sc only}$_x F(x)$, i.e. $\bot$  
+   \vspace{0,3cm}
+ \b.[b.]
+$[\forall]$($\Diamond$({\bf Excl}(anyone   fall))) 
+  \hfill
+  {\scriptsize \btar{|c|c|c|c|}  \hline $\Diamond $ only $d_1$ fall  &  $\Diamond $ only $d_2$ fall   & ...
+ \\
+  \hline
+\etar
+  }  \\ \vspace{0,2cm}  {\it Predicted meaning:} $\forall x \: \Diamond \:${\sc only}$_x  F(x)$
+  \vspace{0,3cm}
+  \c.[c.]
+$[\forall]$({\bf Excl}(anyone who tried to jump fell))  
+\vspace{0,1cm}
+\b.[] \ \hfill
+ {\scriptsize \btar{|c|c|}  \hline only $d_1$ fell  &    only $d_2$ fell     \\
+ \hline
+\etar
+  }  
+  \\ \vspace{0,2cm}  {\it Predicted meaning:} $\forall x(T(x) \to${\sc only}$_x \: F(x))$, i.e. $\bot$  
+
+  
+  
+\bit
+%\item[] {\small {\bf Excl} transforms Hamblin alternatives into    sets of mutually exclusive propositions}
+
+\item {\sc Merits}: captures (a) (out because inconsistent) and (b) (consistent and unrestricted liberty of choice);
+\item {\sc Problems}: doesn't extend to (c) (out because inconsistent).
+\eit}
+
+\frame {\frametitle{Synopsis}
+
+\bit \notext{\pause} \item {\sc Desiderata}: \bit \item M-B's predictions for the unsubtrigged and modal cases (a) and (b) [via {\bf Excl}]; \item Naif
+account's predictions for the subtrigged case (c) [no {\bf Excl}]. \eit 
+\notext{\pause} \item   Question: why {\bf Excl} does not seem to play a role when a post-nominal modifier is present? \notext{\pause} \item   My answer will assume,  rather than {\bf Excl}, a much more general and  independently
+motivated notion   {\bf exh} of exhaustification.
+
+\notext{\pause} \item {\bf What's   next}:
+
+\bit
+\item Main ingredients: exhaustification
+\& type-shift principles
+\item Independent motivation: free relatives  and wh-interrogatives  \item Main application: free choice in modal and subtrigged sentences
+\eit
+\eit }
+\section{Exhaustification and type-shift rules}
+\notext{
+\frame {\frametitle{Exhaustification} \bit \notext{\pause} \item Operations of  maximalization  have been argued to be at work  in
+the semantics of  a large variety of constructions (Rullmann, Grosu \& Landman) \notext{\pause} \item Exhaustification generalizes maximalization (Zeevat, Groenendijk and Stokhof)
+
+\notext{\pause} \item   {\bf Exh}  takes a       {domain} $D$  and a {property} $P$ and returns exhaustive values.\bit \notext{\pause} \item {\bf
+Exh}$[D,P]$ in $w$ is the set of  pairs $ (A,w')$
+  s.t. $A$ is  the `maximal' set of individuals from domain $D$ who
+satisfy $P$ in $w'$.
+\eit
+\notext{Eventually, it would be nice to have a more sophisticated notion to get the example: what I earn is less than what I can live on.}
+\notext{\pause} \item Exhaustive values can undergo two  type-shift rules (Jacobson):
+
+\ben
+\item[(i)] {\sc Shift}$_{\sc DP}$,    yielding maximal sets of individuals  (in a Hamblin semantics, ordinary DP denotations).
+
+
+
+
+\item[(ii)] {\sc Shift}$_{\sc IP}$, yielding G\&S question meanings (in a Hamblin semantics,   ordinary IP denotations).
+
+
+\een
+
+ \notext{\pause} \item Examples:
+{\small
+
+
+ \ex. 
+ \a. who fell = $\lambda X [$only $X$ fell$]$
+ \b. John helped [$_{\sc DP}$ who fell]
+\\ Output of {\bf SHIFT}$_{\sc DP}$: maximal    set of people who fell in $w_0$; 
+\b.  I wonder [$_{\sc IP}$ who  fell]  
+\\
+ Output of {\bf SHIFT}$_{\sc IP}$: partition $\{$none fell,only d$_1$ fell,only d$_2$ fell,...$\}$  
+ 
+  } 
+ 
+ \eit
+ }
+ 
+ }
+ 
+ \frame {\frametitle{Exhaustification} 
+ 
+ \bit 
+ 
+ \item Exhaustive interpretations (Gr \& St 84, vSt\& Zim 84):
+
+
+{\small  
+ \ex.  \a. John and Mary fell \ \ \ \ \  \ \qquad \qquad \ \   $\Rightarrow$ \ \ nobody else fell
+ \b. John can spend 150 Euro \ \ \hfill  \ $\Rightarrow$ \   J cannot spend {\it more}
+\c. John can live on 150 Euro \ \hfill $\Rightarrow$ \ \    J cannot live on  {\it less}
+ 
+ 
+ }
+\notext{\pause} \item  \Last can be explained by {\it pragmatic} reasoning (Spector, S\&vR)
+
+\notext{\pause} \item But exhaustification  at work  in
+the {\it semantics} of a large variety of  constructions (Grosu \& Landman). E.g.%a.o. free relatives, wh-interrogatives, correlatives, degree relatives  (Grosu \& Landman) 
+
+{\small 
+
+\notext{\pause} \ex. Questions (Gr \& St): \a.  John knows who fell. 
+\b. John knows of  those who fell that they fell and that nobody else fell.
+
+\vspace{-0,5cm}
+
+\notext{\pause} \ex. Free relatives (Jacobson):\a. What J can spend is less than what J can live on.  \b. The max  amount of money that J  can spend is less than the min  amount of money that J  can live on.
+
+ }
+ \eit
+ }
+ \notext{\frame {\frametitle{Exhaustification} \bit \notext{\pause} \item At work  in
+the semantics of  many constructions, a.o. free relatives, wh-interrogatives, correlatives, degree relatives  (Grosu \& Landman) 
+
+\notext{\pause} \item Not   surprising if at work in FC constructions,  which in many languages employ  wh-morphology   (Giannakidou \& Cheng)   
+
+\notext{\pause} \item  Exhaustive values: minimal/maximal elements wrt some order (e.g. Zeevat 1994)
+
+{\small \ex. \a. What J can spend is less than what J can live on.
+\b. The max  amount of money that J  can spend is less than the min  amount of money that J  can live on.
+
+\ex. \a.  John helped who fell.
+\b. John helped the (max collection of) people that fell.
+
+}
+
+\eit
+}
+
+}
+\frame {\frametitle{The     {\bf exh} operator}
+\bit 
+\notext{\pause} \item  {\bf exh}    takes a       {domain} D  (type $e$)  and a {property} $P$ (type $\langle e, \langle s, t \rangle \rangle$) and returns the property    of exhaustively satisfying  $P$ wrt $D$:  
+
+
+ 
+
+ 
+\ex. \a.  {\bf
+exh}$[ D, P ] $ \hfill type: ${\langle e, \langle s, t \rangle \rangle}$
+\b. $\{\lambda x \lambda w [x$ exhaustively satisfies $P$ wrt $\alpha$ in $w ]\}$ 
+ 
+
+\notext{\pause} \item E.g. using Zeevat 1994:  
+
+\ex. $x $  exhaustively satisfies $P$ wrt $D$   iff  $x$ is in $D$, $P(x)$ is true, and for all  $y$ in $D$ if $P(y)$ is true then $P(x)$  entails $P(y)$.
+
+\notext{\pause}  \item $x$ and $y$ range over domains of plural individuals (e.g. Link 1983).
+
+\eit}
+
+ 
+%\ex. $\lambda x \lambda w [\phi(x)(w) \wedge \forall y(\phi(y)(w) \to \Box (\phi(x) \to \phi(y)))$
+
+ 
+
+  
+
+\frame{\frametitle{Illustration  of `$x$ exhaustively satisfies $P$ wrt $D$'}
+{\small  
+ \bit
+ \item Normally exhaustive values are maximal plural entities:
+ 
+ \ex. \a. D: people  \hfill $\{\emptyset,  a, b, c,  a+b, a+c, c+b, a+b+c  \}$
+ \b. P: $\lambda x [ x$ fell$]$   \hfill $\{\emptyset, a,b,  a+b  \}$
+ \b. $x$: the max  collection of people that fell   \hfill $ a+b $
+
+ 
+\notext{\pause} \item  But with scalar predication other exhaustification effects show up:  
+\ex. \a. D: amount of money \hfill $\{0, 50, 100, 150,  ...\}$
+\b. P:  $\lambda x  [$J can live on  $x]$   \hfill $\{100, 150, 200, ...\}$
+\b. $x$: the min  amount of money that J can live on   \hfill $  100$
+
+\ex.   \a. D: amount of money \hfill $\{0, 50, 100, 150, 200, ...\}$
+\b. P:  $\lambda x   [ $J can spend  $x ]    $ \hfill   $\{0, 50, 100, 150 \}$ \b. $x$: the max  amount of money that J can spend  \hfill $150$
+
+\eit
+
+}
+}
+ 
+ 
+
+\frame{\frametitle{Two type-shift  rules for properties}
+
+ 
+
+\ben   
+\item   {\sc shift}$_e$:   $\langle e,\langle s,t\rangle \rangle$  $\to$ $e$    \hfill (from properties to   {\bf entities}) 
+
+\ex. Partee iota rule:
+\a. ${\bf P}\ \ {\bf \to } \  \  \iota x  [{\bf P} (x)(w_0)]$  
+ %\b. [P] $\to$   $\{d \mid [P(w)]= \{d\}\}$   undefined otherwise
+\b. $\{   P \}$  $\to$   $\{d \}$ \hfill    if $d$ is the unique $P$ in $w_0$, \\ \ \hfill undefined otherwise
+
+ 
+ 
+\item  {\sc shift}$_{\langle s,t\rangle}$: $\langle e,\langle s,t\rangle \rangle$ $\to$ $ \langle s,t\rangle  $\hfill (from properties to   {\bf propositions})  
+\ex.  `Hamblin' question formation rule:
+\a. {\bf P}$\ \ \to   \ \  \hat{p} \  [ \exists x (${\bf P}$(x)=p )]$  
+\b. $\{  P  \}$ \ $\to$  \ $\{ d_1$ is $P$,    $d_2$ is $P$,  $d_3$ is $P$, ...$\}$
+
+
+ \een
+}
+
+\frame{\frametitle{Exhaustification and type-shift principles}
+When applied to ${\bf exh}[\alpha,{\bf P}]$ 
+
+\ben
+\notext{\pause} \item[(i)] {\sc shift}$_{e}$ (always defined) yields  normally maximal plural entities: 
+ 
+\ex. \a.  {\sc shift}$_e ({\bf exh}[\alpha,{\bf P}])$
+\b. $\{$the maximal plural entity from $\alpha$ satisfying $P$ in the world of evaluation $w_0 \}$  
+
+
+\notext{\pause} \item[(ii)] {\sc shift}$_{\langle s,t\rangle}$ yields sets of mutually exclusive propositions:
+
+  \ex. \a. {\sc shift}$_{\langle s,t\rangle}(  {\bf exh}[\alpha,{\bf P}])$ 
+\b. $\{$nobody is $P$, only $d_1$ is $P$, only  $d_2$ is $P$, only $d_1$ \& $d_2$ are $P$, ... $\}$
+
+\een
+
+}
+\notext{
+\frame{\frametitle{Free relatives and wh-interrogatives}
+ 
+\bit
+\item Exhaustification at work in free relatives (Jacobson):
+
+\ex. \a. What J can spend is less than what J can live on.
+\b. The max  amount of money that J  can spend is less than the min  amount of money that J  can live on.
+
+\ex. \a.  John helped who fell.
+\b. John helped the (max collection of) people that fell.
+
+
+ 
+
+\item    And   wh-interrogatives (Groenendijk \& Stokhof):
+ \ex. \a. John knows who fell.
+\b. John knows which $X$ is the maximal collection of people that fell.
+
+  
+\eit
+}
+
+ }
+ \section{First application:   Free relatives and wh-interrogatives}
+\frame{\frametitle{First application: Free relatives and wh-interrogatives}
+
+\bit
+\item Examples:
+
+\ex.  \a. {\bf  Free relative:} John read $[_{\sc DP}$ what was on the list$]$     
+\b.  {\bf  Wh-interrogative: }  John knows   $[_{\sc Q}$  what was on the list$]$ 
+
+\notext{\pause} \item Main ideas: 
+
+
+\vspace{0,3cm}
+
+\bit
+ 
+
+\item Exhaustification at work    in both constructions (Jacobson, Gr\&St)
+\item 
+Free relatives and wh-interrogatives   born with the same meaning, but typeshift differently (Cooper, Jacobson)
+\eit 
+\eit
+}
+\frame{\frametitle{Formalizing main ideas}
+\bit
+\notext{\pause} \item Common meaning of free relatives and wh-interrogatives: 
+
+
+  \ex.   what was on the list 
+\a. ${\bf exh}$[{what,  on the list}]   \hfill type: $\langle e,\langle s,t\rangle \rangle$
+\b. $\{\lambda x \lambda v . \  x$ is the maximal collection of things on the list  in $v\}$
+ 
+\notext{\pause} \item  Different  type-shift: 
+
+
+\ex.         (John read) $[_{\sc DP}$ what was on the list$]$   
+\a. {\sc shift}$_e (${\bf exh}[what, on the list]$) $ \hfill type: $e$
+\b. $\{$the maximal collection of things on the list in $w_0\}$  
+
+\ex.     (John knows)   $[_{\sc Q}$  what was on the list$]$   
+\a. {\sc shift}$_{  \langle s,t\rangle} (${\bf exh}[what, on the list]$) $ \hfill type:  $ \langle s,t\rangle$
+\b. $\{$nothing was on the list, only $d_1$ was on the list, only  $d_2$ was on the list,   ... $\}$
+
+\eit
+
+}
+
+ \frame{\frametitle{A closer look at free relatives (FRs)}
+
+\bit
+ \item   Definite meaning of FR follows (Jacobson):
+ \ex.   \a.      John read $[_{\sc DP}$ what was on the list$]$   
+\b. $[$Q$]$ ({\bf read}(j)({\sc shift}$_e (${\bf exh}[what, on the list]$) ))$  
+\b. $\{$that John read the things on the list in $w_0\}$  
+
+
+\notext{\pause} \item   FRs, however, sometimes  also have a universal reading: 
+ \ex.    \label{veto} We will veto three-quarters of whatever proposals you make.  
+  \a. {\bf Definite}: Of the proposals: three-quarters won't make it. %\\ \ \hfill  (definite)
+    \b. {\bf Universal}: For each proposal:  three-quarters of it will be vetoed.    %\\ \  \hfill (universal) 
+    \\ \ \hfill [Grosu and Landman 98]
+    
+    \eit
+    }
+    \frame{\frametitle{Universal   reading  of FRs}
+    \bit
+    \item Universal meanings captured in terms of $[\forall]$:
+    
+    
+    \ex.    We will veto three-quarters of whatever proposals you make. 
+  \a. $ [$Q$]({\bf P}(${\sc shift}$_e ({\bf exh}[$whatever$, {\bf S}]) )) $ \hfill  (definite)
+    \b.   $ [\forall] ([$Q$]({\bf P}(\downarrow${\sc shift}$_e ({\bf exh}[$whatever$, {\bf S}]) )) $ \hfill (universal)
+
+
+\notext{\pause}   \item  For \Last-b, we need $\downarrow$   mapping  plural individuals   back into their atomic elements:    
+
+  
+ \ex.   \a. $ \lin\alpha \rin_{w,g} = \{ a+b \} $ \hfill a singleton set of plural individuals
+   \b. $\lin \downarrow \alpha \rin_{w,g}  = \{a,b\}$ \hfill a multi-membered set of atoms
+   
+   
+ 
+\eit
+
+}
+ 
+
+ 
+
+\frame{\frametitle{A closer look at interrogatives}
+
+
+\bit
+\item   Declaratives and interrogatives have the same  type here: $\langle s,t \rangle$. But:
+
+ 
+
+\ex.[]
+\a. Declaratives $\mapsto$ singleton sets of propositions
+\b. Interrogatives $\mapsto$ multi-membered sets of mutually exclusive propositions  
+ 
+ 
+ \vspace{0,3cm}
+ 
+\notext{\pause}  \item For example: 
+\ex. \a. Mary fell $\mapsto$ $\{$that Mary fell$\}$
+\b. Who fell? $\mapsto$ $\{$that no-one fell, that only M  fell,   ...$\}$
+
+\notext{\pause} \item I.e. Groenendijk and Stokhof's  partitions in a Hamblin's  setting.
+
+\eit}
+
+\frame{\frametitle{Know, believe and wonder}
+  Different embedding potential of attitude verbs could be   explained in terms of propositional quantifiers:
+
+\vspace{0,2cm}
+%\ex. \a. John knows who fell/that Mary fell.
+%\b.   Bel$_j [$true$](A)$
+
+\ex. \a. John believes that Mary fell/\#who fell.
+\b.   Bel$_j [\exists](A)$ \hfill
+ {\small [trivial, if A  partition]}
+ 
+ \vspace{0,1cm}
+ 
+\ex. \a. John wonders who fell/\# that Mary fell.
+\b.  $[$Neg$]$ (Bel$_j[Q] (A))$ \hfill {\small [vacuous, if A singleton]}
+
+\vspace{0,1cm}
+
+\ex. \a. John knows who fell/that Mary fell.
+\b.   Bel$_j [$true$](A)$
+ \c. $j$ believes the unique true proposition in   $A$, if there is one, undefined otherwise.
+ 
+}
+
+\frame{\frametitle{More on {\it know}: factivity}
+\bit
+\notext{\pause}  \item When  {\it know} embeds a proposition p,   p must be  true, otherwise undefined:  
+ \ex. 
+  \a. John knows  that Mary fell.
+\b.   Bel$_j  [$true$]({\bf fell}(m))$
+ \c. $j$ believes the unique true proposition in   $ \{$that Mary fell$\}$, if there is one, undefined otherwise.
+ 
+ 
+\notext{\pause} \item Factivity explained: (a) presupposes (b).
+
+\ex. 
+  \a. John knows  that Mary fell \ \   
+\b.   Mary fell
+
+ \eit}
+ \frame{\frametitle{More on {\it know}:  exhaustivity}
+ \bit 
+\notext{\pause} \item When {\it know}  embeds a question (here a partition),   always defined:
+
+
+\ex. \a. John knows who fell.  
+\b. Bel$_j [$true$] ([$Q$] (${\sc shift}$_{\langle s,t\rangle} (${\bf exh}[who, fell]$)))$
+\c. $j$ believes the unique true proposition in   $\{$that no-one fell, that only M  fell,   ...$\}$  
+
+
+\notext{\pause} \item   Weak and strong exhaustivity  follow.
+ 
+ 
+ \ex. \a. John knows who fell    \&   M  fell. $\Rightarrow$  \b.  John knows that M  fell.  \hfill   {\small (weak exhaustivity)} 
+
+
+ 
+\ex. \a. John knows who fell       \&      M  didn't fall. $\Rightarrow$   \b.  John knows that M  didn't fall.  \hfill  {\small  (strong exhaustivity)}
+
+
+\eit
+}
+
+\section{Free choice: subtrigging and modal effects}
+ 
+ \frame
+ {\frametitle{Subtrigging and modal effects of FC items: core idea}
+
+
+
+
+\bit
+\notext{\pause} \item  FC items like wh-words trigger  the application of  {\bf exh}.
+\notext{\pause} \item    {\sc Unsubtrigged  cases}:  
+
+\vspace{-0,2cm}
+
+{\small
+\ex. \a.    $[_{\sc IP}$ Anyone fell$]$  
+\b. $[_{\sc IP}$ Anyone may fall$]$
+
+}
+
+\vspace{-0,2cm}
+\bit
+\item  Exhaustification must apply at the {\sc IP} level;
+ \item    {\sc shift}$_{\langle s,t\rangle }$   generates sets of   mutually exclusive propositional alternatives.
+ 
+\eit
+\notext{\pause} \item {\sc Subtrigged cases}:   
+
+\vspace{-0,2cm}
+
+{\small \ex. $[_{\sc DP}$ Anyone who tried to jump$]$ fell.
+
+}
+
+\vspace{-0,2cm}
+
+\bit  
+
+%\item[b]  Any woman may fall.
+
+\item Exhaustification can apply at the {\sc DP} level;
+\item {\sc shift}$_{e}$ and $\downarrow$ apply and   generate  sets of individuals.
+  \eit
+
+\notext{\pause} \item Post-nominal modifier       crucial for \Last  because it supplies      the 2nd argument   essential for the application of  {\bf exh}  inside the {\sc DP}.   
+\eit
+
+
+}
+
+ 
+
+
+
+\frame
+{\frametitle{\emph{Any}: final proposal}
+
+
+
+\ex. \label{mine}
+\a.  $[\forall] (  ${\sc shift}$_{(s,t)}(${\bf exh}$[$anyone$ $, $ $fell$]))$  
+\vspace{0,3cm}
+\b.[]  {\it Predicted meaning:} $\bot$ \ \hfill  {\scriptsize \btar{|c|c|c|c|}  \hline   only  $d_1$ fell  &  only  $d_2$ fell   & ...
+ \\
+  \hline
+\etar
+  }   
+  \vspace{0,3cm}
+ \b.[b.]   $[\forall] ( \Diamond    ( ${\sc shift}$_{(s,t)}(${\bf exh}$[$anyone,   fall$] )))$ \vspace{0,3cm}
+ \b.[]  {\it Pr. m.:} $\forall x \Diamond
+ ${\sc only}$_x F(x)$   \ \hfill    {\scriptsize \btar{|c|c|c|c|}  \hline $\Diamond $ only $d_1$ fall  &  $\Diamond $ only $d_2$ fall  &   ...
+ \\
+  \hline
+\etar
+  }
+   \\ \vspace{0,2cm}  {\it Predicted meaning:} $\forall x \Diamond
+ ${\sc only}$_x F(x)$    
+  \vspace{0,3cm}
+\c.[c.]  $[\forall] (  \downarrow ${\sc shift}$_{e}(${\bf exh}$[$anyone,  who tried to jump$])$ fell$)$ 
+\vspace{0,3cm}
+\c.[] {\it Predicted meaning:} $\forall x(T(x) \to F(x))$ \ \hfill  {\scriptsize \btar{|c|c|}  \hline $d_1$ fell  &     $d_2$ fell     \\
+ \hline
+\etar }
+%\\ \vspace{0,2cm}  {\it Predicted meaning:} $\forall x(T(x) \to F(x))$  
+
+
+\bit
+\item {\sc Merits}: captures (a) (out because inconsistent), (b) (consistent and unrestricted freedom of choice) and (c) (consistent and universal meaning).
+\item {\sc Problems}: ...
+
+\eit}
+
+\frame{\frametitle{Problems, problems, problems}
+ 
+\bit
+\item {\sc Theoretical}: Where do $[\forall]$ and {\bf exh} come from?
+
+\notext{\notext{\pause} \item  {\sc Empirical}: Not every type of postnominal modifier yields (good) subtriggers.
+Infinitival relatives don't (Chierchia, pc). 
+\ex.   
+\a. A friend to talk to is a blessing. 
+\b.  \#  Any friend to talk to is a blessing. 
+\c.  Any friend who you can talk
+to is such a blessing. 
+
+}
+
+\notext{\pause} \item  {\sc Empirical}: No account of rule-like meaning of subtrigged French  {\it tout} (Jayez \& Tovena) and Spanish {\it cualquier} (Menendez-Benito): 
+
+\ex.  \a. \# Tout \'etudiant qui \'etait dans le couloir est rentr\'{e}.  
+ \\`Any student who was in the corridor came in'
+ \b. Tout \'etudiant qui avait trich\'e a \'et\'e renvoye\'e.
+ \\ `Any student who had cheated was excluded'
+ 
+\item \dots
+
+\eit
+}
+\frame{ \frametitle{The status of $[\forall]$ and {\bf exh}: a speculation}
+
+\bit
+\notext{\pause} \item     The proposed analysis:
+  
+  
+
+
+\ex. \a. Anyone may fall. 
+\b.     $[\forall] ( \Diamond    ( ${\sc shift}$_{(s,t)}(${\bf exh}$[$anyone,   fall$] )))$ \vspace{0,3cm}
+
+\item Hypothesis: 
+
+\vspace{0,3cm}
+
+  \Last-b result of fossilization/conventionalization of an originally pragmatic free choice implicature.
+
+ 
+\eit
+ }
+
+ 
+\frame{\frametitle{Free choice implicatures}
+
+\bit
+\item  Permission \Next-a  pragmatically  implicates \Next-b:
+
+
+\ex. \a. You may go to the beach or go to the cinema.  
+\b. You may go to the beach and you may go to the cinema. 
+
+\notext{\pause} \item Intuitive reasoning behind implicature:
+
+
+\ex. \a. Speaker said $\Diamond (A \vee B)$:
+\b. Could it be that $A$ is not possible? No,  otherwise the speaker would have used $\Diamond B$;
+\c. Could it be that $B$ is not possible? No,  otherwise the speaker would have used $\Diamond A$;
+\d. Therefore, we can conclude  that $A$ is possible and that $B$ is possible. 
+%\d. And, at last, could $(A \wedge B)$ be possible? No otherwise, the speaker would have used $\Diamond (A \wedge B)$;
+ 
+ 
+ 
+ 
+ \eit
+ }
+ 
+ \frame{ \frametitle{Deriving free choice implicatures}
+ 
+ \bit 
+\notext{\pause}  \item Various formalisations of \Last have been proposed  (e.g. Fox, Schulz, Geurts, Aloni)
+ \item Aloni (2006): in BiOT using   Grice's maxims + MMP  which derives pragmatic exhaustification;  
+\notext{\pause}  \item Predictions for  disjunctive permissions:
+ 
+ \ex. \a. original sentence:  $\Diamond (A \vee B)$
+\b.   FC implicature: $ \Diamond  (A \wedge \neg B) \wedge \Diamond (B \wedge \neg A) $
+
+\notext{\pause} \item Generalization to the existential case:
+\ex.  
+\a.  original  sentence: $\Diamond \exists x F(x)$
+\b. FC implicature: $\forall x \: \Diamond  \:  ${\sc only}$_x   F (x)$
+
+\eit
+}
+\frame{\frametitle{Back to FC items: Chierchia 2006}
+\bit
+
+\notext{\pause} \item Why not Chierchia's analysis? 
+\vspace{-0,2cm}
+
+\ex.  Anyone may fall.
+\a.  basic meaning: $\Diamond \exists x F(x)$
+\b. FC (local)  implicature: $\forall x \Diamond    ${\sc only}$_x   F (x)$ \label{imp}
+
+\vspace{-0,2cm}
+
+ \notext{\pause} \item Hard to extend to the  episodic case:
+
+ \vspace{-0,2cm}
+
+ 
+\ex.  Anyone who tried to jump fell.
+\a.  basic meaning: $\exists x (T(x) \wedge F(x))$
+\b. antiexhaustiveness   implicature: $\forall x (T(x) \to F(x))$
+
+\ex.   \# Anyone   fell.
+\a.  basic meaning: $\exists x   F(x)$
+  \b. antiexhaustiveness  implicature: $\forall x   F(x)$
+
+
+\item Problems: 
+
+\vspace{-0,2cm}\bit
+ 
+\item Antiexhaustiveness  implicature: not a rational implicature;  \item Dayal's explanation needed for  \LLast and \Last.
+ \eit
+ \eit
+}
+
+\frame{\frametitle{My proposal: a diachronic perspective}
+\bit 
+\notext{\pause} \item  In languages with specialized free choice morphology,   free choice implicatures,  pragmatic in origin,    have been conventionalized  using mechanisms of propositional quantification:
+
+
+ 
+
+\ex.   Anyone may fall. 
+ \a. {Original FC   implicature}: $\forall x \Diamond    ${\sc only}$_x   F (x)$ 
+ \b. {Logical form after fossilization}: $[\forall] ( \Diamond    ( ${\sc shift}$_{(s,t)}(${\bf exh}$[$anyone,   fall$] )))$ 
+ 
+ 
+\notext{\pause} \item  {\bf exh} $\mapsto$ grammaticalized version of originally pragmatic exhaustification. 
+\notext{\pause} \item Once in the grammar,     {\bf exh} in interplay with $[\forall]$ and standard type-shift rules explain  restricted distribution and subtrigging effects.
+
+
+\eit }
+
+
+\frame{\frametitle{Diachronic stages}
+
+\bit
+\item Three diachronic stages  wherein languages gradually developed free choice morphology:% (cf. Levinson 2000,   on the development of reflexive pronouns) 
+
+\begin{description}
+\item[stage 1] Languages with no specialized free choice morphology \hfill e.g. Maltese
+\item[stage 2] Languages in which emphatic indefinites may prefer free choice interpretations \hfill  e.g. German {\it irgendein}
+\item[stage 3] Languages with free choice morphology \hfill e.g. Romance, Hebrew, Lavtian,...
+\end{description}
+
+\notext{\pause} \item  Back to our initial question:   semantics or pragmatics?
+\bit
+\item FC effects:  
+\bit
+\item In stage 1 and 2 languages:  global implicatures (cancellable)
+
+\item In stage 3 languages: conventionalized implicatures (i.e. entailments)
+\eit
+
+\item Subtrigging effects:   entailments
+ ($\Rightarrow$ occurs  only in stage 3 languages)
+
+\eit
+\eit
+}
+
+\frame { \frametitle{Future plans} 
+
+\bit \notext{\pause} \item Look for evidence for diachronic hypothesis ({\it Vidi} project)
+
+\notext{\pause} \item Extend the proposal to account for rule-like interpretations of subtrigged sentences;
+\notext{\pause} \item Apply the analysis to  explain variety of  disjunctions (e.g. Szabolcsi).
+
+\ex. I didn't see John or Mary.   \a. $\neg A \vee \neg B$  \b. $ \neg (A \vee B) $
+
+\ex. \a. Non ho visto Giovanni \emph{o} Maria.
+$\neg A \vee \neg B$ \b. Non ho visto \emph{n\'e} Giovanni \emph{n\'e} Maria. $ \neg (A \vee B) $ 
+
+\item ...
+\eit }
+
+
+\end{document}
+
+\frame{ 
+\begin{center}
+{\huge \sc the end }
+\end{center}
+}
+
+\end{document}
+\notext{
+\frame
+{\frametitle{\emph{Any}: my proposal}
+
+
+
+\ex. \label{mine}
+\a.  $[\forall] ( ${\bf Exh}$_{\sc IP} [$anyone$ $, $ $fell$])$  \hfill
+  {\scriptsize \btar{|c|c|c|c|}  \hline   only  $d_1$ fell  &  only  $d_2$ fell   & ...
+ \\
+  \hline
+\etar
+  }
+\b.  $[\forall] ( \Diamond   (${\bf Exh}$_{\sc IP}[$anyone,   fall$] ))$ \hfill   {\scriptsize \btar{|c|c|c|c|}  \hline $\Diamond $ only $d_1$ fall  &  $\Diamond $ only $d_2$ fall  &   ...
+ \\
+  \hline
+\etar
+  }
+\c.  $[\forall] (${\bf Exh}$_{\sc DP}[$anyone,  who tried to jump$]$ fell$)$ \hfill
+ {\scriptsize \btar{|c|c|}  \hline $d_1$ fell  &     $d_2$ fell     \\
+ \hline
+\etar }
+
+\bit
+\item {\sc Merits}: captures (a) (out because inconsistent), (b) (consistent and unrestricted freedom of choice) and (c) (consistent and universal meaning).
+\item {\sc Problems}: none :-)
+\eit}
+}
+\frame { \frametitle{Future plans} 
+
+\bit \notext{\pause} \item Work out details  \notext{\pause} \item Define a more sophisticated notion of exhaustification:
+\ex.  What I earn is less than what I can live on. 
+
+\notext{\pause} \item Look at relation between    {\bf Exh}, [Q], `only' and pragmatic exhaustification.
+
+\notext{\es{John knows who may attend the meeting.} 
+\ees{\item Where can I buy an Italian newspaper?
+\item (Only) at the station.
+}}
+\notext{\pause} \item Extend the analysis to Italian (and Hungarian) disjunctions.
+
+\ex. I didn't see John or Mary. $ \neg (A \vee B) $ / $\neg A \vee \neg B$  
+
+\ex. \a. Non ho visto Giovanni \emph{o} Maria.
+$\neg A \vee \neg B$ \b. Non ho visto \emph{n\'e} Giovanni \emph{n\'e} Maria. $ \neg (A \vee B) $ 
+
+\eit }
+ \notext{
+
+\frame
+{
+\frametitle{Conclusion}
+
+
+\ben
+ \notext{\pause} \item Examples:\ees[1]{\item[a.]  \# Any woman fell.
+
+\item[b]  Any woman may fall.
+
+\item[c.]   Any woman who tried to jump fell.   \hfill  ({\bf subtrigging effect})   }
+\notext{  {\it Any}    felicitous in possibility statements, but
+needs   post-nominal modifier  in episodic sentences  {\bf subtrigging effect}        LeGrand, 1975).}
+
+\notext{\pause} \item Existing analyses of (c):
+\bit
+\item Modifier   brings us back to earth  (Dayal, Chierchia)
+\item Modifier   triggers hidden structure (modal, conditional) (Quer, Giannakidou)
+\eit
+\notext{\pause} \itemMy proposal:
+\bit
+\item \emph{Any} triggers hidden structure: a universal and an exhaustivity operator: $[\forall]$ {\bf Exh} (Any ...)
+\item   (a) is out because it involves a universal quantification over mutually exclusive propositions.
+
+\item The presence of the modal in (b) and the modifier in (c) prevents inconsistence because allow  {\bf Exh} to apply on a lower level.
+ \eit
+ \een
+ }
+}
+\frame
+{
+\frametitle{Appendix}
+\ben
+ \item[a.] $\lin ${\bf Exh}$\rin_{w,g}$ = $f$ s.t.  \[f(D, P) =\{(A,w')\mid w'\in W \ \& \ A=(D \cap  P(w')) \} \]
+
+\item[b.] $\lin${\sc shift}$_{DP}\rin_{w,g}$ = $f'$ s.t. $f'(X)= A $ iff   $(A,w)\in X $
+
+\item[c.] $\lin ${\sc shift}$_{IP}\rin_{w,g}$ = $f_2$ s.t. $f_2(X)=\{\{w' \in W\mid (A,w')\in X\} \mid A \subseteq D\}$
+\een
+ }
+\end{document}
+
+ \frame{ \frametitle{The origin of $[\forall]$ and {\bf Exh}}
+
+Hypothesis: Pragmatic origin of $[\forall]$ and {\bf Exh}
+
+
+\ex. \a. Anyone may fall. 
+\b.     $[\forall] ( \Diamond    ( ${\sc shift}$_{(s,t)}(${\bf Exh}$[$anyone,   fall$] )))$ \vspace{0,3cm}
+
+\Last-b result of fossilization/conventionalization of originally pragmatic inference.
+
+
+ }
+
+\frame{ \frametitle{The case of exhaustification}
+
+ 
+\bit
+\item 
+Exhaustification as a   pragmatic operation (Spector, Schulz and van Rooij)
+
+\ex.
+\a. Maria ...
+\b. Nodoby else ...
+
+\item formalized in terms of minimal model principle: 
+
+Falsify everything that does not need to be true
+
+
+}
+
+\frame{\frametitle{Free choice implicature}
+
+
+
+
+
+}
+
+\end{document}

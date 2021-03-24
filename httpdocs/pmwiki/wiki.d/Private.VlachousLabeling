@@ -1,0 +1,15 @@
+version=pmwiki-2.2.0-beta65 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; nl-NL; rv:1.7.12) Gecko/20050919 Firefox/1.0.7
+author=
+charset=ISO-8859-1
+csum=
+ctime=1220349260
+host=145.18.66.27
+name=Private.VlachousLabeling
+rev=1
+targets=
+text='''Contexts'''%0a%0a*  Downward  entailing: %0a** Antimorphic%0a** Too ... to%0a** Negative word (nobody)%0a** Without%0a** Before%0a** Comparatives%0a** Conditional%0a* Veridical:%0a** Factive%0a** Affermative episodic%0a** Context with copula sentence%0a** Existential%0a* Modal%0a* Generic%0a* Interrogatives%0a %0a'''Interpretations'''%0a* Widening%0a* Ignorance%0a* Indifference%0a* Indiscriminacy (random)%0a* Indistinguishability (average)%0a* Low-level
+time=1220349260
+author:1220349260=
+diff:1220349260:1220349260:=1,26d0%0a%3c '''Contexts'''%0a%3c %0a%3c *  Downward  entailing: %0a%3c ** Antimorphic%0a%3c ** Too ... to%0a%3c ** Negative word (nobody)%0a%3c ** Without%0a%3c ** Before%0a%3c ** Comparatives%0a%3c ** Conditional%0a%3c * Veridical:%0a%3c ** Factive%0a%3c ** Affermative episodic%0a%3c ** Context with copula sentence%0a%3c ** Existential%0a%3c * Modal%0a%3c * Generic%0a%3c * Interrogatives%0a%3c  %0a%3c '''Interpretations'''%0a%3c * Widening%0a%3c * Ignorance%0a%3c * Indifference%0a%3c * Indiscriminacy (random)%0a%3c * Indistinguishability (average)%0a%3c * Low-level%0a\ No newline at end of file%0a
+host:1220349260=145.18.66.27

@@ -1,0 +1,165 @@
+ \section*{Appendix}
+
+In this appendix we present a dynamic semantics for questions and
+their embedding under ``know". The system is one way of
+formalizing Schaffer's remarks on the dynamics of conversation,
+but making explicit the importance of the order in which questions
+are
+asked. %We do not integrate issues about presupposition here.
+
+ %\begin{itemize}
+ %\item
+
+ \paragraph{Questions denotations.}
+ %(more or less Hamblin (possible answers rather than true answers):
+
+Question denotations are defined Hamblin-style, namely as the set
+of possible answers (rather than true answers) to the question. To
+mark the disjunction in alternative questions, we use $\vee_a$. A
+polar question like ``did John leave?" denotes the set $\{$John
+left, John did not leave$\}$; an alternative question like ``did
+John leave, or did Mary leave?" denotes the set $\{$Mary left,
+John left$\}$; a constituent question like ``who left?" denotes
+the set of its elementary answers over the domain of individuals,
+e.g. $\{$John left, Mary left, Susan left, ...$\}$.
+
+ \ex. Polar questions (``did John leave?")
+ \a. syntax: $?\phi$
+ \b. semantics: $\lambda p  [p=\phi \vee p=\neg \phi]$ \hfill $\{\phi, \neg \phi\}$
+
+ \ex. Alternative questions (``did John leave, or did Mary leave?")
+  \a. syntax: $?(\phi  \vee_a \psi)$
+ \b. semantics: $\lambda p  [p=\phi \vee p= \psi]$ \hfill $\{\phi,   \psi\}$
+
+\ex. Constituent questions (``who left?")
+ \a. syntax: $?x \phi   $
+ \b. semantics: $\lambda p  [\exists x (p=\phi(x))]$ \hfill $\{\phi(d),   \phi(d'),...\}$
+
+%%%%%%%%%%%%%%%%%%%
+
+\paragraph{Answers.} The denotation $Q$ of a question Q determines
+an equivalence relation (or, equivalently, a partition) Part($Q$)
+over the set of possible worlds, from which different notions of
+answers can be defined. Two worlds $w$ and $v$ are in the same
+cell of the partition if they belong to exactly the same members
+of the denotation of Q.
+
+\ex. Part($Q$) = $\{(w,v) \mid \forall \alpha \in Q: w \in \alpha
+\ \ \mbox{iff} \ \ v \in \alpha \}$
+
+
+\noindent \emph{Exhaustive answers} to $Q$ correspond to cells in
+Part($Q$). The \emph{exhaustive true answer} to $Q$ in $w$ is the
+cell including $w$ in Part($Q$). Finally, \emph{partial answers}
+(true in $w$) correspond to non-trivial unions of cells of
+Part($Q$) (including $w$), namely unions of cells different from
+Part($Q$).
+
+\paragraph{Context and Updates.} %(this is very crude):
+
+%\begin{itemize}
+
+%\item with assertions
+
+A context $C$ is defined as an ordered pair whose first index
+$s_C$ is an information state (set of worlds), and whose second
+index $QUD_C$ is a question under discussion (set of
+propositions). A context $C$ can be updated either by an assertion
+$P$, or by the introduction of a new question $Q$:
+
+\ex. \a. $ C + P = (s_C \cap  P, QUD_{C})$\quad (assertions) \b.
+$C + Q = (s_C, QUD_{C} \cup Q)$\quad (questions)
+
+%\item Without assertions:
+
+%\ex.   $C + Q = (C \cup Q)$
+
+%\end{itemize}
+
+\paragraph{Knowledge.} Knowledge ascriptions are evaluated relative
+to a possible world and a context. A subject S knows Q if S's
+belief state, when restricted to the alternatives raised by the
+question under discussion, entails the exhaustive true answer to
+Q.
+
+\ex.  ``S knows Q" is true wrt $C$ in $w$ iff $K_w \cap (\cup\
+QUD_C)$ entails the exhaustive true answer to Q in $w$
+
+%Or alternatively (prob equivalent) \ex. s knows Q wrt C in w iff
+%for all true partial answer $A$ $(K_w \cap QUD_C)$ entails A in w
+
+%(this second formulation would maybe allow us  to express partial
+%knowledge, and the following entailment (if we define not know $Q$
+%= for all  partial answers A not know (A)) :
+
+%\ex. not know  ?(A or B) $\Rightarrow$ not know ?A and not know  ?B
+
+\paragraph{Schaffer's example.} Let us take $s_C$ to be $\{w_{B^{*}}\}$, namely
+the actual world $w=w_{B^{*}}$ is a world in which only Bush is on
+TV; $K_w= \{w_{B^{*}}, w_{F^{*}}\}$, that is S's belief state is
+compatible with either only Bush being on TV, and only Ferrell
+being on TV. When the dialogue starts, {\bf QUD$_C$}  is empty. The semantics
+derives the following predictions:
+
+\ex. \a. S knows whether it is Bush or Janet Jackson on TV. \b.
+true in $C + ?(B \vee_a J)$, but false in $C +  ? (B \vee_a J) + ?
+(B \vee_a F)$
+
+\ex. \a. S knows whether it is Bush or Ferrell on TV. \b. false in
+$C + ?(B \vee_a F)$, and likewise false in $C + ?(B \vee_a F) +
+?(B\vee_a J)$.
+
+\enlargethispage{1cm}
+
+\input{fig2}
+
+Figure 2 is another, more adequate way of looking at Figure 1 in
+order to represent the question ``is it Bush, or is it Janet
+Jackson?". Each cell in the partition induced by $?(B\vee_{a} J)$
+is itself partitioned into $F$-worlds (below the diagonal) and
+$\neg F$-worlds (above the diagonal). S's belief state $K_w$
+consists of the curved portion containing $w$ above the diagonal
+in the area $B\neg J \neg F$, together with the curved portion
+below the diagonal in the area $\neg B \neg J F$.
+
+Suppose S is asked first whether Bush or Janet Jackson is on TV.
+This updates $C$ with the question under discussion $?(B\vee_a
+J)$. Relative to that question, namely to the alternatives
+$\{B,J\}$, S can give the true exhaustive answer ``Bush and not
+Janet Jackson". Then $S$ is asked whether Bush or Ferrell is on
+TV. This increments the context with a new question under
+discussion, namely $?(B \vee_a F)$, which enlarges the space of
+relevant alternatives to $\{B,J,F\}$. This time, S's state $K_w$
+no longer supports the exhaustive answer ``Bush and not Jackson",
+for it also overlaps with the exhaustive answer ``neither Bush nor
+Jackson". In other words, S's belief state only supports the
+partial answer ``not Jackson".
+
+The notion of partial answer, it may be noted, remains consistent
+with Schaffer's intuition that the question ``is it Bush, or Janet
+Jackson?" is easier than the question ``is it Bush, or Ferrell?",
+since S can at least provide a partial answer to the first.
+
+The system predicts that ``S knows whether Bush or Ferrell is on
+TV" will come out true if the question under discussion is simply
+$?(B\vee_a J)$, namely ``is Bush or Janet Jackson on TV?". But
+this will not happen: for the background question under discussion
+should always include the question discussed in the knowledge
+report.
+
+
+
+
+
+
+%\ex. \a. Ralph knows whether it is Bush or Ferrell on TV. \b.
+%false in $C+ ?(b \vee_A f)$
+
+
+ % \ex. Ralph   knows  whether it is Bush.
+ % \a. true if Ferrell $\not\in C$
+ % \b. false if Ferrell $\in C$
+
+
+
+%\end{itemize}

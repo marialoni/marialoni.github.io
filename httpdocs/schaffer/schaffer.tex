@@ -1,0 +1,335 @@
+  \documentclass{article}
+\usepackage{latexsym}
+ 
+ \usepackage{a4wide,linguex}
+
+ 
+\newcommand{\bit}{\begin{itemize}} \newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}} \newcommand{\een}{\end{enumerate}}
+
+\newcommand\notext[1]{}
+
+\gdef\bibname{Bibliography}
+
+\makeatother
+\pagestyle{empty}
+\begin{document}
+ 
+ \section{definitions}
+ 
+ \bit
+ \item Questions denotations (more or less Hamblin (possible answers rather than true answers):
+ 
+ \ex. Polar questions
+ \a. syntax: $?\phi$
+ \b. semantics: $\lambda p  [p=\phi \vee p=\neg \phi]$ \hfill $\{\phi, \neg \phi\}$
+ 
+ \ex. Alternative questions
+  \a. syntax: $?\phi  \vee_a \psi$
+ \b. semantics: $\lambda p  [p=\phi \vee p= \psi]$ \hfill $\{\phi,   \psi\}$
+
+ 
+\ex. Constituent questions
+ \a. syntax: $?x \phi   $
+ \b. semantics: $\lambda p  [\exists x (p=\phi(x))]$ \hfill $\{\phi(d),   \phi(d'),...\}$
+
+
+\item Partitions (exhaustive and partial answers)
+
+\ex. Part(Q) = $\{(w,v) \mid \forall \alpha \in Q: w \in \alpha \ \ \mbox{iff} \ \ v \in \alpha \}$
+
+
+exhaustive answers = cells in Part(Q) 
+
+exhaustive true answer in $w$ = cell including $w$
+
+partial answers (true in w)= unions of cells of Part(Q) (including $w$)but different from Part(Q)
+
+\item Knowledge:
+
+\ex. s knows Q wrt C in w iff $(K_w \cap QUD_C\cap Q)$ entails the exhaustive true answer to Q in w
+
+Or alternatively (prob equivalent)  
+\ex. s knows Q wrt C in w iff for all true partial answer $A$ $(K_w \cap QUD_C)$ entails A in w
+
+(this second formulation would maybe allow us  to express partial knowledge, and the following entailment (if we define not know $Q$ = for all  partial answers A not know (A)) :
+
+\ex. not know  (A or B) $\Rightarrow$ not know A and not know  B
+
+
+\item Context and updates (this is very crude):
+
+\item with assertions
+\ex. Context = info state (set of world) + question under discussion   (set of propositions)
+
+\ex. \a. $ C + P = (s_C \cap  P), QUD)$ (assertions)
+\b. $C + Q = (s_C, QUD \cup Q)$ (questions)
+
+\item Without assertions:
+
+\ex.   $C + Q = (C \cup Q)$ 
+
+
+
+
+\item Our example. Lets take $s_C$ to be $\{w_B\}$, and $K_w= \{w_B, w_F\}$. Then,
+
+\ex. \a. Ralph knows whether it is B or J on TV.  
+\b. true in $C + (? b \vee_A j)$, but false in $C +  ? (b \vee_A j) +  ? (b \vee_A f)$
+
+
+\ex. \a. Ralph knows whether it is B  or F on TV.  
+\b. false in $C +     ? (b \vee_A f)$
+
+  
+  \ex. Ralph   knows  whether it is Bush.
+  \a. True if F \not\in C
+  \b. False if F \in C
+  
+  
+
+\eit
+\end{document}
+
+
+ Under Karttunen's semantics, to know-{\it wh} is to know  the true propositions that answer Q. For example to know who called is  to know of the people that actually called that they called. Groenendijk and Stokhof (1984) observed that our intuitions are in fact stronger than that. Knowing who called further requires to know of the people who didn't call that they didn't call.
+ Compare the following entailments:
+ 
+ 
+
+\ex. \label{weak} \a. John knows who called  \ \ \& \ \ Mary called. $\Rightarrow$ \b.  John knows that Mary called.
+
+
+
+\ex. \label{strong} \a. John knows who called.  \   \& \    Mary didn't call. $\Rightarrow$ \b.  John knows that Mary didn't call.
+
+
+ \noindent Karttunen's analysis   captures \LLast but fails to validate \Last. To capture \Last G\&S assume that to know Q is to know the true {\it exhaustive} answer to Q, rather than the true answer. Suppose only Mary and John called:
+ 
+ \ex.   Who called?
+ \a. true answer: John and  Mary called. 
+ \b. true exhaustive answer: John and Mary   called and  nobody else called.
+ 
+  
+ Following Groenendijk and Stokhof we call weakly exhaustive an analysis which defines question denotation and    knowledge-{\it wh} in terms of the notion of their true answer, and so validates  \ref{weak}, and strongly exhaustive one which defines question denotation and knowledge-{\it wh} in terms of the notion of  their true exhaustive answer and therefore validates   \ref{strong}.
+ 
+ \ex. \a. Weakly exhaustive theory: 
+ s knows Q iff s knows that p where  p is the true answer to Q
+\b. Strongly exhaustive theory: 
+   s knows Q iff s knows that p where  p is the true exhaustive answer to Q
+ 
+ 
+ It is easy to see that both theories are reductive and do satisfy (CV). 
+ Only the weakly exhaustive theory however satisfies the following argument that according to Schaffer's follows from (CV):
+ 
+ \ex.[(A)] \a. S knows ?$ (\phi \vee \psi_1)$
+ \b.  $\phi$
+ \b. S knows ?$ (\phi \vee \psi_2)$
+ 
+ 
+\noindent  To see why we have to have  a closer look at disjunctive questions.
+ 
+ \subsection{Polar versus alternative readings}
+ 
+First of all notice that disjunctive questions like  {\it Is Bush or Janet Jackson on television?} are ambiguous between a polar reading (expected answer: {\it yes/no})    and an alternative reading (expected answers: {\it  Bush/Jackson}).
+ A number of languages (e.g. Mandarin Chinese, Finnish and Basque)  use different disjunctive markers for these two reading (Haspelmath 2000). In English, intonation seems to play a disambiguating role. In alternative questions, the alternatives are stressed:
+ 
+ 
+\ex. Is {\sc Bush} or {\sc Jackson} on television?  \ \ a. \ (?) Yes/No. \ \ b. \ Bush/ Jackson.
+ 
+ 
+ The     contrastive  {\it either}... {\it or}, instead, can only express polar reading. 
+ 
+ \ex. Is either Bush  or   Jackson  on television?  \ \ a. \ Yes/No. \ \ b. \  (?) Bush/ Jackson.
+ %The alternative reading is  the  preferred reading of questions like  {\it Is Bush %on TV or isn't he?} The polar reading would be  trivial in this case.  
+
+
+
+ Let us assume now that only Bush is on television. Consider   Schaffer's two examples.
+ 
+  \ex. \a. Is Bush or Janet Jackson on television? 
+ \b.  Is Bush or Will Ferrell on television? 
+ 
+On the polar reading,   Schaffer's two questions are not convergent:\footnote{For polar questions, the notions of  the true and exhaustive answer collapse. True answers to polar questions are always exhaustive (Groenendijk and Stokhof).}  
+  
+\ex.     Is   Bush or Janet Jackson on television?  (on polar reading)
+\b. True (exhaustive) answer: Either Bush or Janet Jackson is on television.
+
+
+\ex. \a.  Is   Bush or Will Ferrell on television?  (on polar reading)
+\b. True (exhaustive) answer: Either Bush or Will Ferrell is on television.
+
+  
+
+The proposition: {\it Bush is on TV} entails both answers, but strictly speaking is  not  the answer to either of the questions. You do not need to know that Bush is on television to know whether either Bush or someone else is on television. As expected, argument (A) is not valid in this case:
+
+\ex.  \a. S knows whether  either Bush or   Janet Jackson is on television. 
+ \b. Bush is on TV.
+ \b. S knows    whether either Bush or  Will Ferrell is on television.
+
+Suppose S wrongly believes that Janet Jackson is on TV. Then S believes the   disjunctive proposition Bush or   Janet Jackson is on television, but need not to believe the disjunctive proposition Bush or  Will Ferrell is on television.
+
+
+Let us turn to the alternative reading,   the reading intended by Schaffer in his argument.
+\footnote{There is no agreement in the literature on how these questions should be analyzed. Groenendijk and Stokhof (1984) cannot derive this reading (to be checked). In what follows, exhaustive answers to alternative questions are computed assuming  Heim's (19??) algorithm to derive exhaustive answers from Kartunnen's true answers. Cf. Aloni and van Rooij which derives the same.}  
+
+\ex. \label{jackson}
+\a.  Is Bush or Janet Jackson on television? 
+\b. True answer: Bush is on television.
+\b. True exhaustive answer: Bush is on television and Janet Jackson is not.
+
+\ex. 
+\label{ferrell}
+\a.  Is Bush or Will Ferrell on television? 
+\b. True answer: Bush is on television.
+\b. True exhaustive answer: Bush is on television and Will Ferrell is not.
+
+It is easy to see that only if we assume a weak exhaustive analysis of knowledge-wh
+argument (A) would be valid. 
+ On the strongly exhaustive analysis, indeed for \Next-c to be true S has to know that Will Ferrell is not on TV. 
+ 
+\ex.  \a. S knows whether Bush or   Janet Jackson is on television. 
+ \b. Bush is on TV.
+ \b. S knows    whether  Bush or  Will Ferrel is on television.
+
+
+ \end{document}
+ 
+ His argument hinges on two assumptions. The first assumption is that
+ 
+ Let us clarify this point by looking at a who question.
+ 
+ 
+ 
+ There is Division wrt to the notion of the true answer
+ 
+ Suppose only John and Mary smoke. Consider now the question in \Next and its possible answers A, A1 and A2:
+ 
+ \ex. Who smokes?
+ \a.[A:] Mary smokes.
+\b.[A1:] John and Mary smokes.
+ \b.[A2:] Only John and Mary smokes.
+ 
+ Knowing A  is definitely not enough for knowing who smokes. Otherwise we would invalidate the following intuitively valid entailment:
+ 
+ \ex. \a. Bill knows who smokes.
+ \b. John smokes.
+ \b. Bill knows that John smokes.
+ 
+ Would knowing A1 be enough? According to Kartunnen (1977), yes. But this view has been criticized by G\&S, because it would invalidate the following entailment which instead according to them is valid.
+  
+  
+ 
+ \ex. \a. Bill knows who smokes.
+ \b. Sara doesn't smokes.
+ \b. Bill knows that Sara doesn't smoke.
+
+ According to G\&s then knowledge of A2 is required in this case, what they call the true exhaustive answer to the question.
+ 
+Knowing the exhaustive answer means knowing of the true answers that they are true and of the false answers that they are false.
+ 
+
+Let us now turn to Schaffer's examples:
+
+
+\ex. \a. Is Bush or Janet Jackson on television? 
+ \b.  Is Bush or Will Ferrell on television? 
+ 
+Disjunctive questions are ambiguous between a polar reading (expected answer: yes/no)    and an alternative reading (expected answers: Bush / Janet Jackson)\footnote{A number of languages (e.g. Mandarin Chinese, Finnish and Basque)  use different disjunctive markers for these two reading (Haspelmath 2000). In English  the contrastive  {\it either}... {\it or} can only express polar reading (Is either Bush of Janet Jackson on TV? Yes/No/?Bush/?Jackson). The alternative reading is the preferred reading of questions like  {\it Is Bush on TV or isn't he?} The polar reading would be  trivial in this case. }
+
+Let us assume that only Bush is on television.
+On the polar reading,  Schaffer's two questions are not convergent: 
+
+\ex. 
+\ex. \a. Question: Is Bush or Janet Jackson on television?  \b. True (exhaustive) answer: Bush or Janet Jackson is on television.
+
+
+\ex. \a.  Is Bush or Will Ferrell on television? 
+\b. True (exhaustive) answer: Bush or Will Ferrel is on television.
+
+The proposition: {\it Bush is on TV} entails both answers, but strictly speaking is not  the answer to either of the questions.
+
+
+Let us turn to the alternative reading, probably the reading intended by Schaffer.
+There is no agreement in the literature on how these questions should be analyzed. Groenendijk and Stokhof cannot derive this reading (to be checked). Let us have a look at  Karttunen's analysis of these questions:
+
+
+
+\ex. \a.  Is Bush or Janet Jackson on television? 
+\b. True answer: Bush is on television
+\b. True exhaustive answer (via Heim): Bush is on television and Janet Jackson is not.
+
+\ex. \a.  Is Bush or Will Ferrell on television? 
+\b. True answer: Bush is on television
+\b. True exhaustive answer (via Heim): Bush is on television and Will Ferrell is not.
+
+
+Does knowledge wh require knowledge of the true answer or knowledge of the true exhaustive answer?
+Only in the second case, we predict the following entailment to be valid:
+
+\ex. \a. Ralph knows whether   Bush or Janet Jackson is on TV.
+\b. Janet Jackson is not on TV. 
+\b. Therefore, Ralph knows that Janet Jackson is not on TV.
+
+On the strongly exhaustive analysis of {\it know}, still a reductive view on knowledge, Schaffer scheme at pag. 5 does not hold.
+
+
+\section{Some entailments}
+\bit 
+\item First entailment:
+
+\ex. \a. John knows whether Bush of Janet Jackson is on TV
+\b. Bush is on TV
+\c. John knows whether Bush of Farrell is on TV
+ 
+ 
+\item Predictions:
+
+Partition view: not valid 
+counterexample:  John's state =$\{w_B, w_{BF}\}$
+
+
+Groenendijk's alternatives: valid (to be checked)
+ 
+ 
+ \item Second entailment:
+ 
+\ex. \a. John knows whether Bush or Janet Jackson is on TV
+ \b. John knows whether Bush   is on TV
+ 
+ 
+ Partition view: valid
+
+ Intuition: valid?
+ 
+\item  Third:
+ 
+ 
+ \ex.  
+ \a. John knows whether Bush   is on TV
+ \b. John knows whether Bush or Janet Jackson is on TV
+ 
+ not valid in partition theory, 
+ 
+ valid in Groenendijk's alternatives.
+ 
+ \item with only:
+ 
+ 
+ \ex. \a. John knows that only Bush is on TV.
+ \b. John knows whether Bush or Janet Jackson is on TV.
+  \c. John knows whether Bush or Farrell is on TV.
+ 
+ \item Schaffer's case
+ 
+ \ex. \a. Only one person is on TV.
+ \b. John doesn't know whether Bush or Farrell is on TV.
+ \c.  But, he  knows whether Bush or Janet Jackson is on TV.
+ 
+  \ex. \a. Only one person is on TV.
+ \b.  John knows whether Bush or Janet Jackson is on TV.
+  \b. But he doesn't know whether Bush or Farrell is on TV.
+  
+  
+ \eit
+ \end{document}

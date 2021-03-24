@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.07pt}
+\beamer@sectionintoc {1}{Convergent Knowledge}{2}{0}{1}
+\beamer@sectionintoc {2}{Alternative Questions}{14}{0}{2}
+\beamer@sectionintoc {3}{Context and Attributions}{29}{0}{3}
+\beamer@sectionintoc {4}{Presupposition}{43}{0}{4}

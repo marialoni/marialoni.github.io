@@ -1,0 +1,165 @@
+\section{Schaffer's examples}
+
+\begin{frame}
+
+\frametitle{A closer look at Schaffer's examples}
+
+\begin{itemize}
+
+\item Schaffer's intuition: knowing whether Bush or Janet Jackson is
+on TV is easier than knowing whether Bush or Ferrell is on
+TV.\pause
+
+\item Contextualist idea: knowing whether A or B can be easier than
+knowing whether A or C, if the alternatives provide suitable
+\alert{restrictions} of the agent's epistemic state.\pause
+
+\end{itemize}
+
+\ex. ``S knows that P" is true in $w$ iff $K_w \subseteq P$\pause
+
+\ex. \label{wh} ``S knows whether A or B" is true in $w$ iff
+$K_{w}\cap(A \cup B) \subseteq A$ or $K_{w}\cap(A \cup B)
+\subseteq B$
+
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\input{figure1} \pause
+
+\ex. \a. $K_{w} \cap (B \cup F) \nsubseteq B$, $\nsubseteq F$. \b.
+Bill does not know whether Bush or Ferrell is on TV.\pause
+
+\ex. \a. $K_{w} \cap (B \cup J) \subseteq B$ \b. Bill knows
+whether Bush or Jackson is on TV.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+
+\frametitle{Partial answers}
+
+\begin{itemize}
+
+\item Suppose Bill is asked whether Bush or Jackson is on TV. Bill
+is certain it is not Jackson, but thinks it might be Ferrell. What
+would Bill answer to:
+
+\ex. Is it Bush or Janet Jackson?
+
+\ex. \a. (?) It's Bush. \b. At any rate, it's not Janet
+Jackson.\pause
+
+\item Another example (from Schaffer)
+
+\ex. Was the thirteenth president of the US Millard Fillmore or
+Hillary Clinton?
+
+\ex. \a. (?) Millard Fillmore. \b. At any rate, not Hillary
+Clinton.
+
+\end{itemize}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Dynamics of questions}
+
+\ex. Is it a zebra or a horse?
+
+\ex. A zebra.
+
+\ex. Is it a zebra or a cleverly painted mule?
+
+\ex. I don't know.
+
+\ex. So is it a zebra, or a horse?
+
+\ex. Well, not a horse, but...
+
+\alert{Consequence}: one cannot take the alternatives present in
+the question to systematically restrict the agent's epistemic
+state.
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Alternative questions revisited}
+
+\begin{tabular}{ll}
+
+\small{Representation} & Q= $?p ( p \wedge(p=\phi \vee p=\psi))$\\
+
+\small{Denotation} & \val{Q}=$\{ (p, w) \mid w\in p \ \& \ p=
+\val{
+$\phi$} \ or \ p= \val{$\psi$} \}$\\
+
+\small{Partition} & Part(Q)=$\{(w,v)\mid (p,w) \in \val{$Q$}\ iff\
+(p,v)\in \val{$Q$}\}$\\
+
+\small{Topics} & Top(Q)=$\{ p\mid \exists w: (p,w)\in
+\val{$Q$}\}$\\
+
+\end{tabular}
+
+\ex. Did John leave, or did Mary leave? \a. Representation $?p ( p
+\wedge (p=\phi \vee p=\psi))$ \b. Partition: $\{\phi \wedge \neg
+\psi, \neg \phi \wedge   \psi, \neg (\phi\vee \psi), \phi \wedge
+\psi\}$ \b. Topics: $\{\phi,\psi\}$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Contexts and Updates}
+
+\bit
+
+\item Context $C=(s_{C},i_{C})$: $s_{C}$=set of worlds(=context set); $i_{C}$=
+sequence of question denotations (=issues under discussion).
+
+\ex. \a. $C+P = (a_{C} \cap \val{$P$}, q_{C})$ \b. $C+Q= (a_C,
+q_C+ \val{$Q$})$
+
+\item Assertions update the context set; questions update the
+issues under discussion.
+
+\eit
+
+\end{frame}
+
+%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Knowledge contextualized}
+
+Top($C$)= union of all Top(Q) for all Q in $C$.
+
+\ex. ``S knows Q'' is true in world $w$ with respect to context
+$C$ iff \a.[(i)] $K_w \ \cap\ $Top$(C) \ \subseteq \ $ANS$_w(Q)$,
+\ \ if  Top$(C)\neq\emptyset$; \b.[(ii)] $K_w   \ \subseteq \
+$ANS$_w(Q)$,  \ \ otherwise.
+
+
+
+
+\end{frame}

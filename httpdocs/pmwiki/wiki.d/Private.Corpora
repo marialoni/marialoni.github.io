@@ -1,0 +1,21 @@
+version=pmwiki-2.2.0-beta65 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.0.8) Gecko/2009032608 Firefox/3.0.8
+author=
+charset=ISO-8859-1
+csum=
+ctime=1213884212
+host=145.18.77.30
+name=Private.Corpora
+rev=3
+targets=Private.ListOfCorpora,Private.Labeling,Private.Pilot,Private.HaspelmathsLabeling
+text=*[[list of corpora]]%0a*[[labeling]]%0a*[[Pilot]]%0a*[[Haspelmath's labeling]]%0a
+time=1253000041
+author:1253000041=
+diff:1253000041:1220951465:=4d3%0a%3c *[[Haspelmath's labeling]]%0a
+host:1253000041=145.18.77.30
+author:1220951465=
+diff:1220951465:1213884212:=3d2%0a%3c *[[Pilot]]%0a
+host:1220951465=145.18.66.27
+author:1213884212=Maria
+diff:1213884212:1213884212:=1,2d0%0a%3c *[[list of corpora]]%0a%3c *[[labeling]]%0a
+host:1213884212=145.18.66.27

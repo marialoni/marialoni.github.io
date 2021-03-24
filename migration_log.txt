@@ -1,0 +1,4 @@
+On laptop:
+$ mkdir maloni
+$ cd maloni
+$ scp -r maloni1@maloni.humanities.uva.nl:~/httpdocs/ .  # enter uva sftp passwd

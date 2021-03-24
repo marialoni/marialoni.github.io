@@ -1,0 +1,231 @@
+\documentclass[font=palatino]{beamer}
+
+
+
+%\usecolortheme[rgb={0.6,0.2,0.2}]{structure}
+\usepackage{beamerthemeMalmoe}
+
+\mode<presentation> \AtBeginSubsection
+
+
+\title{Alternative Questions\\ and Knowledge Attributions}
+
+
+\date{18/04/2008}
+\author[]{M. Aloni \& P. \'Egré}
+\institute{}
+
+\AtBeginSubsection[] {
+  \begin{frame}<beamer>
+    \frametitle{Plan}
+
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+\newcommand{\lang}[1]{\ensuremath{\mathcal{L #1}}}
+
+\usepackage{latexsym}
+\usepackage[cyr]{aeguill}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{bm}
+\usepackage{linguex}
+\newtheorem{theo1}{Theorem}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{def1}{Definition}
+\newtheorem{thez}{Thesis}
+\newtheorem{question}{Question}
+\newtheorem{loi}{Law}
+\newtheorem{hypot}{Hypothesis}
+\newtheorem{lemme}{Lemma}
+
+\newcommand{\bl}{$\bullet$\ }
+\newcommand{\val}[1]{\mbox{ $[\![$  #1 $]\!]$}}
+\newcommand{\bit}{\begin{itemize}} \newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}} \newcommand{\een}{\end{enumerate}}
+\newcommand\notext[1]{}
+
+
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\LA}{\langle}
+\newcommand{\RA}{\rangle}
+\newcommand{\linf}{$L_{\infty, \infty}$}
+\newcommand{\linfm}{$L^{-}_{\infty, \infty}$}
+\newcommand{\lio}{$L_{\infty, \omega}$}
+\newcommand{\lom}{$L_{\omega, \omega}$}
+\newcommand{\struc}[1]{\ensuremath{\la #1 \ra}}
+\newcommand{\iso}[1]{\ensuremath{\approx _{ #1 }}}
+\newcommand{\isoa}{\ensuremath{\approx _{\alpha}}}
+\newcommand{\isop}{\ensuremath{\approx _{p}}}
+\newcommand{\nisop}{\ensuremath{\not \approx _{p}}}
+\newcommand{\sta}{\ensuremath{\mathcal{A}}}
+\newcommand{\stb}{\ensuremath{\mathcal{B}}}
+\newcommand{\stc}{\ensuremath{\mathcal{C}}}
+\newcommand{\stm}{\ensuremath{\mathcal{M}}}
+\newcommand{\stmp}{\ensuremath{\mathcal{M}'}}
+\newcommand{\eqliw}{\ensuremath{\equiv _{\infty , \omega} }}
+\newcommand{\eqliwa}{\ensuremath{\equiv _{\infty , \omega}^{\alpha} }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+
+\begin{frame}
+
+\maketitle
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Convergent Knowledge}
+
+\begin{frame}
+
+\frametitle{Schaffer's problem of convergent knowledge}
+
+\framesubtitle{(J. Schaffer 2007)}
+
+\ex. \a. Is George Bush or Will Ferrell on TV? \b. Is George Bush
+or Janet Jackson on TV?\pause
+
+\begin{itemize}
+
+\item \alert{Assumption 1}: to know Q is to know the true answer
+to Q
+
+\item \alert{Assumption 2}: ``George Bush is on TV" is the true
+answer to both questions.
+
+
+
+\end{itemize}\pause
+
+\ex. \a. Bill knows whether George Bush or Will Ferrell is on TV.
+\b. Bill knows whether George Bush or Janet Jackson is on TV
+
+
+
+%%
+
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Convergent knowledge (1)}
+
+\ex.[(CV)] \qquad \begin{tabular}{c}
+\val{Q}($w$)\ =\val{Q'}($w$)\\
+\hline \val{S knows Q}($w$)\ =\val{S knows Q'}($w$)\\
+\end{tabular}\pause
+
+\begin{itemize}
+
+\item (CV) holds both in Karttunen's theory of questions, and in
+Groenendijk and Stokhof's theory of questions.\medskip \pause
+
+\item When Q and Q' have the same complete answers, knowing Q and
+knowing Q' are truth-conditionally equivalent (by
+compositionality).
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Convergent Knowledge (2)}
+
+According to Schaffer, ``if a question has a true answer, it must
+converge with any question that merely shifts the false answers":
+
+\ex.[(A)] \a. S knows $?(\phi \vee \psi_1)$
+ \b.  $\phi$
+ \c. S knows whether $?(\phi \vee \psi_2)$
+
+\ex. \a. Bill knows whether Bush or Janet Jackson is on TV. \b.
+Bush is on TV. \c. Bill knows whether Bush or Ferrell is on TV.
+
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Schaffer's proposal}
+
+\begin{itemize}
+
+\item the standard analysis of knowing-wh in terms of knowing-that
+is flawed.
+
+\item know is question-relative: to know that Bush is on TV means
+to know that Bush rather than someone else is on TV
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Our proposal}
+
+\begin{itemize}
+
+\item While (CV) is supported by the standard theories of
+questions, (A) need not be.\pause
+
+\item On at least one reasonable analysis of alternative
+questions, (CV) fails to deliver Schaffer's predictions\pause
+
+\item Alternative questions can be used to contextually restrict the space of
+possibilities relevant for knowledge attributions
+
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+\frametitle{Outline}
+
+\begin{enumerate}
+
+\item Polar and alternative questions
+
+\item Ascriptions and Context
+
+\item Adding Presupposition
+
+\end{enumerate}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{alternative}
+
+\input{context}
+
+\input{presupposition}
+
+\input{conclusion}
+
+
+\end{document}

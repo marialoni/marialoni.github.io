@@ -14,3 +14,11 @@ $ git add .
 $ git commit -m "original import"
 $ git push --set-upstream origin master
 
+Now all files are in Github
+- https://github.com/rednaw/maloni
+
+On laptop:
+$ cp ~/Downloads/articles.html httpdocs/articles.html
+$ git add httpdocs/articles.html
+$ git commit -m "updated articles list"
+$ git push

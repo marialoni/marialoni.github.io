@@ -1,3 +1,5 @@
+@import "https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css";
+
 SPAN.name {  }
 SPAN.title {  }
 SPAN.where {  }
@@ -6,9 +8,8 @@ BODY {
   color: #000;
   background: #FFF;
   margin-right: 1%;
-  font-family : Times New Roman;
-  font-size: 120%; 
-  color : black; 
+  font-family: "Computer Modern Serif", serif;
+  color : black;
 }
 
 H2 { font-weight: bold }

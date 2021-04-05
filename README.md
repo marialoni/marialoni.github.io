@@ -1,2 +1,2 @@
 # marialoni.github.io
-This static HTML project backs https://www.marialoni.org
+Static HTML for https://www.marialoni.org

@@ -23,7 +23,13 @@ div.right {
   position: absolute;
   top: 2em;
   right: 5%;
-  left: 160px;
+  left: 110px;
+}
+
+div.centered {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 div.main_left {
@@ -49,7 +55,7 @@ div.project_left {
   position: absolute;
   top: 0em;
   right: auto;
-  width: 100px;
+  width: 90px;
   border-right-color: black;
   border-right: solid;
 }
